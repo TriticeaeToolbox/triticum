@@ -1,7 +1,13 @@
+<style>
+    #sgnlogo {
+        height: 44px;
+        padding-left: 4px;
+    }
+</style>
+
 
 <a class="navbar-brand" href="/" style="padding:10px 0px">
 
-<img id="sgnlogo" 
-src="/static/img/sgn_logo_icon.png" width="60" alt="TriticumBase Home" title="TriticumBase Home"></a>
+<img id="sgnlogo" src="/static_content/img/t3.png" alt="TriticumBase Home" title="TriticumBase Home"></a>
 
 <a class="navbar-brand sgn_brand_name" href="/">TriticumBase</a>
