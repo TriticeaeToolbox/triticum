@@ -1,22 +1,57 @@
+<style>
+  .footer-container {
+    padding: 0;
+    width: 100%;
+  }
+  .footer-row {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p.copyright {
+    font-size: 80%;
+    color: #aaa;
+  }
+</style>
 
 <!-- END CONTENT WRAPPER -->
-
-      </div>
-      <div class="col-sm-1 col-md-1 col-lg-2">
-      </div>
-    </div>
-  </div>
+</div></div></div>
 
 <!-- BEGIN FOOTER -->
 <br/>
-<!-- div id="pagefooter" class="navbar navbar-default" style="margin-bottom:0px;">
 
-
-</div -->
-<hr>
-		<div style="margin-left:20pt; margin-top:10pt">
-     This site is hosted at the <a href="https://btiscience.org/">Boyce Thompson Institute</a>.<br />
-     	  
-	  <a href="https://btiscience.org"><img src="/img/bti_logo_2016.png" width="140" /></a>
-	       </div>
+<div class="container footer-container">
+  <hr />
+  <div class="row footer-row">
+    <div class="col-md-4">
+      <a href="https://btiscience.org"><img src="/img/bti_logo_2016.png" width="140" /></a>
+      <p>This site is hosted at the <a href="https://btiscience.org/">Boyce Thompson Institute</a>.</p>
+    </div>
+    <div class="col-md-5">
+      <a href="https://nifa.usda.gov/international-wheat-yield-partnership-iwyp-program">
+        <img src="/static_content/img/nifa.gif" />
+      </a>
+      <br />
+      <a href="https://www.ars.usda.gov/research/project/?accnNo=430844">
+        <img src="/static_content/img/ars.png" />
+      </a>
+      <br />
+      <a href="http://scabusa.org/">
+        <img style="float: left" src="/static_content/img/scab.gif" width="80px" />
+        <p style="margin-top: 30px; margin-left: 90px">US Wheat and Barley Scab Initiative</p>
+        <br /><br />
+      </a>
+    </div>
+    <div class="col-md-3">
+      <p class="copyright">
+        The Triticeae Toolbox is part of the <a href="https://www.triticeaecap.org/">Triticeae CAP project</a>, 
+        supported by Agriculture and Food Research Initiative Competitive Grant no. 2011-68002-30029 
+        from the USDA National Institute of Food and Agriculture.
+      </p>
+      <p class="copyright">
+        Copyright &copy; 2006 - 2010 Iowa State University
+      </p>
+    </div>
+  </div>
+</div>
 
