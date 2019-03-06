@@ -1,0 +1,16 @@
+<%args>
+$schema
+$static_content_path => undef
+$show_accept_dialog => undef
+</%args>
+
+<center>
+<br/>
+<!-- & homepage/carousel.mas & -->
+<br/>
+</center>
+
+<br/>
+
+
+<& homepage/github_pullrequests.mas &>

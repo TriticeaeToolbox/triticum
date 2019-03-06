@@ -1,0 +1,19 @@
+
+<& /page/page_title.mas, title=>"TriticumBase Help" &>
+
+<div>TriticumBase is a breeding database implementing tools to manage data and next-generation breeding protocols based on high density marker data for banana species used as major food sources in Africa.</div>
+
+<h3>Manual</h3>
+
+<div>The TriticumBase manual is available as a <a href="https://solgenomics.github.io/sgn/">Google Doc</a>. It was written for CassavaBase but TriticumBase is based on CassavaBase, so the manual applies to TriticumBase as well.</div>
+
+<h3>FAQ</h3>
+
+<div>For frequently asked questions, see the <a href="/help/faq">FAQ page</a>.</div>
+
+<h3>SlideShare</h3>
+
+<div>SlideShare has <a href="http://www.slideshare.net/solgenomics">a collection of slide decks</a> about the related <a href="https://solgenomics.net">SGN</a> and <a href="https://cassavabase.org">CassavaBase</a> databases.
+
+
+
