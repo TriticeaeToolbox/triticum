@@ -1,9 +1,9 @@
 
-<& /page/page_title.mas, title=>'Data Usage Policy' &>
+<!-- <& /page/page_title.mas, title=>'Data Usage Policy' &> -->
 
 The data on this database is shared according to the Toronto agreement (see below). 
 
-In addition, each trial may have its own restrictions, please check the relevenat section on each trial detail page.
+In addition, each trial may have its own restrictions, please check the relevant section on each trial detail page.
 
 <h3>Toronto Agreement</h3>
 
