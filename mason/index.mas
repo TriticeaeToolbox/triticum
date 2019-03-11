@@ -19,8 +19,7 @@ $show_accept_dialog => undef
         color: #fff;
     }
     .btn-home {
-        float: right;
-        margin: 0 15px 15px 15px;
+        margin: 5px;
     }
     .btn-home:hover {
         background-color: #286090 !important;
@@ -33,6 +32,9 @@ $show_accept_dialog => undef
 
 <div class="page-container">
 
+
+    <!-- INTRO -->
+
     <h1>Welcome to TriticumBase</h1>
 
     <p>
@@ -44,25 +46,128 @@ $show_accept_dialog => undef
         (<a href="https://nifa.usda.gov/program/agriculture-and-food-research-initiative-afri">AFRI</a>). 
     </p>
 
-    <a href="/contact/form" class="btn btn-primary btn-large btn-home">Leave Feedback</a>
-    <p>
-        TriticumBase is the next evolution of <strong>The Triticeae Toolbox (<a href="https://triticeaetoolbox.org/wheat/">T3</a>)</strong>.  We 
-        are in the process of transitioning all of T3's data and tools to this new system.  We encourage you to leave feedback about feature 
-        improvements, missing tools, and/or any ideas you may have to improve the site.
-    </p>
+
+
+
+    <!-- FEEDBACK -->
+
+    <div class="row">
+
+        <div class="col-sm-9">
+            <p>
+                TriticumBase is the next evolution of <strong>The Triticeae Toolbox (<a href="https://triticeaetoolbox.org/wheat/">T3</a>)</strong>.  We 
+                are in the process of transitioning all of T3's data and tools to this new system.  We encourage you to leave feedback about feature 
+                improvements, missing tools, and/or any ideas you may have to improve the site.
+            </p>
+        </div>
+
+        <div class="col-sm-3">
+            <a href="/contact/form" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp;
+                Leave Feedback
+            </a>
+        </div>
+
+    </div>
+
+
 
     <br /><br />
+
+
+
+    <!-- SEARCH -->
+
     <h2>Explore TriticumBase</h2>
-    <a href="/breeders/search" class="btn btn-primary btn-large btn-home">Open Search Wizard</a>
-    <p>Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.</p>
 
-    <br /><br />
+    <div class="row">
+
+        <div class="col-sm-9">
+            <p>
+                Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.
+            </p>
+            <p>
+                Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, or <strong>Traits</strong>.
+            </p>
+        </div>
+        
+        <div class="col-sm-3">
+            <a href="/breeders/search" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-search"></span>&nbsp;
+                Open Search Wizard
+            </a>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <a href="/search/phenotypes/stock" class="btn btn-primary btn-large btn-home">Search Accessions</a>
+            <a href="/search/trials" class="btn btn-primary btn-large btn-home">Search Trials</a>
+            <a href="/tools/onto" class="btn btn-primary btn-large btn-home">Browse Traits</a>
+        </div>
+    </div>
+    
+    
+
+    <br /><br /><br />
+    
+    
+
+    <!-- SUBMISSIONS -->
+
+    <h2>Submit Data</h2>
+
+    <div class="row">
+
+        <div class="col-sm-9">
+            <p>
+                Contributing data to TriticumBase?  <strong>Manage your Phenotypic Data</strong> to create 
+                spreadsheets for new uploads, add new data, and/or manage your existing uploads.
+            </p>
+        </div>
+
+        <div class="col-sm-3">
+            <a href="/breeders/phenotyping" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-open-file"></span>&nbsp;
+                Manage Phenotypic Data
+            </a>
+        </div>
+
+    </div>
+
+
+    <br /><br /><br />
+
+
+
+    <!-- DOCUMENTATION -->
+
     <h2>User Guides</h2>
-    <a href="https://solgenomics.github.io/sgn/" class="btn btn-primary btn-large btn-home">Read Documentation</a>
-    <p>New to TriticumBase?  View the <strong>Documentation</strong> to learn about available features.</p>    
+
+    <div class="row">
+
+        <div class="col-sm-9">
+            <p>New to TriticumBase?  View the <strong>Documentation</strong> to learn about available features.</p>
+        </div>
+
+        <div class="col-sm-3">
+            <a href="https://solgenomics.github.io/sgn/" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-question-sign"></span>&nbsp;
+                Read Documentation
+            </a>
+        </div>
+
+    </div>
+
+
 
 
     <br /><br />
+
+
+    <!-- CITATION -->
+
     <hr />
 
     <p class="reference">
