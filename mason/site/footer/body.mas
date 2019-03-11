@@ -1,5 +1,7 @@
 <style>
   .footer-container {
+    border-top: 1px solid #ddd;
+    background-color: #eee;
     padding: 0;
     width: 100%;
   }
@@ -8,8 +10,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .footer-row > div {
+    margin-bottom: 25px;
+  }
+  img.partner-logo {
+    max-height: 60px;
+    margin: 5px 0;
+  }
   p.copyright {
-    font-size: 80%;
+    font-size: 90%;
     color: #aaa;
   }
 </style>
@@ -21,34 +30,34 @@
 <br/>
 
 <div class="container footer-container">
-  <hr />
+  <br />
   <div class="row footer-row">
-    <div class="col-md-4">
-      <a href="https://btiscience.org"><img src="/img/bti_logo_2016.png" width="140" /></a>
-      <p>This site is hosted at the <a href="https://btiscience.org/">Boyce Thompson Institute</a>.</p>
+    <div class="col-sm-4">
+      <h3>Hosted By</h3>
+      <a href="https://btiscience.org"><img class="partner-logo" src="/img/bti_logo_2016.png" /></a>
     </div>
-    <div class="col-md-5">
+    <div class="col-sm-5">
+      <h3>Partners</h3>
       <a href="https://nifa.usda.gov/international-wheat-yield-partnership-iwyp-program">
-        <img src="/static_content/img/nifa.gif" />
+        <img class="partner-logo" src="/static_content/img/nifa_new.png" />
       </a>
       <br />
       <a href="https://www.ars.usda.gov/research/project/?accnNo=430844">
-        <img src="/static_content/img/ars.png" />
+        <img class="partner-logo" src="/static_content/img/ars_new.png" />
       </a>
       <br />
       <a href="http://scabusa.org/">
-        <img style="float: left" src="/static_content/img/scab.gif" width="80px" />
-        <p style="margin-top: 30px; margin-left: 90px">US Wheat and Barley Scab Initiative</p>
-        <br /><br />
+        <img class="partner-logo" src="/static_content/img/scab_new.png" />
       </a>
     </div>
-    <div class="col-md-3">
+    <div class="col-sm-3">
+      <h3>Funded By</h3>
       <p class="copyright">
-        Triticumbase is part of the <a href="https://www.triticeaecap.org/">Triticeae CAP project</a>, 
+        TriticumBase is part of the <a href="https://www.triticeaecap.org/">Wheat CAP project</a>, 
         supported by Agriculture and Food Research Initiative Competitive Grant no. 2011-68002-30029 
         from the USDA National Institute of Food and Agriculture.
       </p>
     </div>
   </div>
-</div>
 
+</div>
