@@ -19,11 +19,21 @@ $show_accept_dialog => undef
         color: #fff;
     }
     .btn-home {
-        margin: 5px;
+        float: right;
+        margin: 5px 10px;
+        width: 220px;
     }
     .btn-home:hover {
         background-color: #286090 !important;
         color: #fff !important;
+    }
+    .btn-search {
+        margin: 5px 0;
+        background-color: #d9edf7;
+        color: #31708f !important;
+    }
+    .btn-search:hover {
+        background-color: #C0D4DE !important;
     }
 </style>
 
@@ -53,7 +63,7 @@ $show_accept_dialog => undef
 
     <!-- FEEDBACK -->
 
-    <a href="/contact/form" class="btn btn-primary btn-large btn-home" style="float: right; margin: 10px">
+    <a href="/contact/form" class="btn btn-primary btn-large btn-home">
         <span class="glyphicon glyphicon-envelope"></span>&nbsp;
         Leave Feedback
     </a>
@@ -73,8 +83,17 @@ $show_accept_dialog => undef
     <div class="row">
 
 
-
         <!-- LEFT COLUMN -->
+        <div class="col-md-4">
+
+            <!-- NEWS -->
+            <& /homepage/news.mas &>
+            <br /><br />
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
         <div class="col-md-8">
 
             
@@ -83,23 +102,23 @@ $show_accept_dialog => undef
             
             <h2>Explore TriticumBase</h2>
 
-            <p>Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.</p>
-            <p>Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, or <strong>Traits</strong>.</p>
-
             <a href="/breeders/search" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-search"></span>&nbsp;
                 Open Search Wizard
             </a>
 
+            <p>Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.</p>
+            <p>Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, or <strong>Traits</strong>.</p>
+
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="/search/phenotypes/stock" class="btn btn-primary btn-large btn-home">Search Accessions</a>
+                    <a href="/search/phenotypes/stock" class="btn btn-primary btn-large btn-search">Search Accessions</a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="/search/trials" class="btn btn-primary btn-large btn-home">Search Trials</a>
+                    <a href="/search/trials" class="btn btn-primary btn-large btn-search">Search Trials</a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="/tools/onto" class="btn btn-primary btn-large btn-home">Browse Traits</a>
+                    <a href="/tools/onto" class="btn btn-primary btn-large btn-search">Browse Traits</a>
                 </div>
             </div>
 
@@ -114,14 +133,15 @@ $show_accept_dialog => undef
 
             <h2>Submit Data</h2>
 
-            <p>Contributing data to TriticumBase?</p>
-            <p><strong>Manage your Phenotypic Data</strong> to create spreadsheets for new uploads, add new data, and/or manage your existing uploads.</p>
-
             <a href="/breeders/phenotyping" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-open-file"></span>&nbsp;
                 Manage Phenotypic Data
             </a>
 
+            <p>Contributing data to TriticumBase?</p>
+            <p><strong>Manage your Phenotypic Data</strong> to create spreadsheets for new uploads, add new data, and/or manage your existing uploads.</p>
+
+            
 
             <br /><br /><br />
 
@@ -131,27 +151,16 @@ $show_accept_dialog => undef
 
             <h2>User Guides</h2>
 
-            <p>New to TriticumBase?</p>
-            <p>View the <strong>Documentation</strong> to learn about available features.</p>
-
             <a href="https://solgenomics.github.io/sgn/" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-question-sign"></span>&nbsp;
                 Read Documentation
             </a>
 
+            <p>New to TriticumBase?</p>
+            <p>View the <strong>Documentation</strong> to learn about available features.</p>
+
 
             <br /><br /><br />
-
-
-        </div>
-
-
-
-
-        <!-- RIGHT COLUMN -->
-        <div class="col-md-4">
-            
-            <& /homepage/news.mas &>
 
 
         </div>
@@ -171,5 +180,7 @@ $show_accept_dialog => undef
     <p class="reference">
         TriticumBase is open source software and available under the <a href="https://raw.githubusercontent.com/solgenomics/sgn/master/LICENSE">MIT License</a> and may be downloaded from <a href="https://github.com/solgenomics/sgn">GitHub</a>.
     </p>
+
+    
 
 </div>
