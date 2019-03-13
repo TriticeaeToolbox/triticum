@@ -32,7 +32,7 @@ $show_accept_dialog => undef
         background-color: #d9edf7;
         color: #31708f !important;
     }
-    .btn-search:hover {
+    .btn-search:hover, .btn-search:active, .btn-search:focus {
         background-color: #C0D4DE !important;
     }
 </style>
@@ -181,6 +181,6 @@ $show_accept_dialog => undef
         TriticumBase is open source software and available under the <a href="https://raw.githubusercontent.com/solgenomics/sgn/master/LICENSE">MIT License</a> and may be downloaded from <a href="https://github.com/solgenomics/sgn">GitHub</a>.
     </p>
 
-    
+
 
 </div>

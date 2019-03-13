@@ -16,6 +16,8 @@ my $contents = do {
 <style>
     .news-panel-body {
         padding: 8px;
+        max-height: 300px;
+        overflow: auto;
     }
     .news-item {
         border-top: 1px solid #eee;
