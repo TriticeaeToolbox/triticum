@@ -6,7 +6,13 @@
 
 use strict;
 
-my $disabled = $c->get_conf('disable_add_user');
+my $disabled = 0;
+eval {
+  $disabled = $c->get_conf('disable_add_user');
+};
+if ( $@ ) {
+  print STDERR "Config value of 'disable_add_user' not set";
+} 
 
 </%perl>
 
