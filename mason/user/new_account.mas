@@ -1,0 +1,41 @@
+
+<%args>
+</%args>
+
+<%perl>
+
+use strict;
+
+my $disabled = 0;
+eval {
+  $disabled = $c->get_conf('disable_add_user');
+};
+if ( $@ ) {
+  print STDERR "Config value of 'disable_add_user' not set";
+} 
+
+</%perl>
+
+
+<& /page/page_title.mas, title => "Create New Account" &>
+
+
+<!-- USER ACCOUNT CREATION ENABLED -->
+% if ( $disabled == 0 ) {
+  <& /user/new_account_form.mas &>
+
+
+<!-- USER ACCOUNT CREATION DISABLED -->
+% } else {
+  
+  <div class="panel panel-danger" style="margin: 150px 0;">
+    <div class="panel-heading">New Accounts Disabled</div>
+    <div class="panel-body">
+      <p>Currenly, the creation of new accounts is disabled.</p>
+      <hr>
+      <p class="mb-0">If you would like to request access, please <a href="/contact/form">Contact Us</a>.</p>
+    </div>
+  </div>
+
+
+% }
