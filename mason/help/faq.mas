@@ -6,11 +6,11 @@
   }
 </style>
 
-<& "/page/page_title.mas", title => "TriticumBase: Frequently Asked Questions (FAQ)" &>
+<& "/page/page_title.mas", title => "T3: Frequently Asked Questions (FAQ)" &>
 
 <div class="faq-container">
   <p>
-    This page contains questions that TriticumBase users ask and
+    This page contains questions that T3 users ask and
     are useful to the larger wheat breeding community. Please
     <a href="/contact/form">let us know</a> if you have a question 
     that you think should be added.
@@ -19,19 +19,19 @@
   <br /><br />
 
   <p>
-    <strong>Question:</strong> The TriticumBase pages look really messed up on my browser.
+    <strong>Question:</strong> The T3 pages look really messed up on my browser.
   </p>
   <p>
     <strong>Answer:</strong> You are working with an old browser
     that does not support style sheets, such as the browsers of the 
-    Netscape 4.x series. TriticumBase pages require style sheets and 
+    Netscape 4.x series. T3 pages require style sheets and 
     javascript to be turned on.
   </p>
 
   <br />
   
   <p>
-    <strong>Question:</strong> Can I submit my data to TriticumBase?
+    <strong>Question:</strong> Can I submit my data to T3?
   </p>
   <p>
     <strong>Answer:</strong> Please <a href="/contact/form">contact us</a> with a description 

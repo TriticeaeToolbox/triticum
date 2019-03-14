@@ -1,6 +1,18 @@
 
-<div id="usage_policy"> <h4>Triticumbase adheres to the Toronto agreement on prepublication data release</h4>
-All data deposited on Triticumbase adheres to the Toronto Agreement on prepublication data release. To foster transparent and accessible data sharing culture, in accordance with the Toronto Agreement, all data deposited on Triticumbase will be made public immediately. Data producers can provide information on the data they deposit, including planned analyses and publication timeline information, to indicate their publication intentions. Data users are expected to respect scientific etiquette and allow data producers the first global analyses of their data set, and should be aware that pre-publication data may not have been subject to full quality control and peer review, so caution must be applied when utilizing these data. More information is available on the <a href="/usage_policy">data usage policy</a> page.</div>
+<div id="usage_policy" style="display: none">
+  <h3>T3 Data Usage Policy</h3>
+  <p>
+    In 2009 the Toronto International Data Release Workshop agreed on a policy statement about prepublication data sharing. 
+    Accordingly, the data producers are making many of the datasets in T3 available prior to publication of a global analysis. 
+    Guidelines for appropriate sharing of these data are given in the excerpt from the Toronto Statement.
+  </p>
+  <p>
+    More information is available on the <a href="/usage_policy">data usage policy</a> page.
+  </p>
+  <p>
+    I agree to the Data Usage Policy as specified in Toronto Statement.
+  </p>
+</div>
 
 <style type="text/css">
   .no-close .ui-dialog-titlebar-close { 
@@ -27,7 +39,7 @@ All data deposited on Triticumbase adheres to the Toronto Agreement on prepublic
 
 
   if (jQuery.cookie("website_usage_policy_approved") == 1) { 
-    document.write('You have already accepted the <a href="/usage_policy">website usage policy</a>. Thank you.<br />');
+    // document.write('You have already accepted the <a href="/usage_policy">website usage policy</a>. Thank you.<br />');
   }
 
   window.onload=function() { 
@@ -36,7 +48,6 @@ All data deposited on Triticumbase adheres to the Toronto Agreement on prepublic
  
     if (cookie == undefined) {
     //  alert("showing!");
-  
       jQuery('#usage_policy').dialog("open");
   //alert("Done!");
     } 
