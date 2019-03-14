@@ -3,11 +3,19 @@
         height: 44px;
         padding-left: 4px;
     }
+    .new-t3 {
+        background-color: #AC813D;
+        border-radius: 7px;
+        color: #fff;
+        font-size: 85%;
+        padding: 2px 5px;
+        margin-left: 10px;
+    }
 </style>
 
 
 <a class="navbar-brand" href="/" style="padding:10px 0px">
 
-<img id="sgnlogo" src="/static_content/img/t3.png" alt="TriticumBase Home" title="TriticumBase Home"></a>
+<img id="sgnlogo" src="/static_content/img/t3.png" alt="New T3 Home" title="New T3 Home"></a>
 
-<a class="navbar-brand sgn_brand_name" href="/">TriticumBase</a>
+<a class="navbar-brand sgn_brand_name" href="/"><span class="new-t3">New</span> T3/Wheat</a>

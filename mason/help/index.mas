@@ -1,11 +1,11 @@
 
-<& /page/page_title.mas, title=>"TriticumBase Help" &>
+<& /page/page_title.mas, title=>"T3 Help" &>
 
-<div>TriticumBase is a breeding database implementing tools to manage data and next-generation breeding protocols based on high density marker data for banana species used as major food sources in Africa.</div>
+<div>T3 is a breeding database implementing tools to manage data and next-generation breeding protocols based on high density marker data for banana species used as major food sources in Africa.</div>
 
 <h3>Manual</h3>
 
-<div>The TriticumBase manual is available as a <a href="https://solgenomics.github.io/sgn/">Google Doc</a>. It was written for CassavaBase but TriticumBase is based on CassavaBase, so the manual applies to TriticumBase as well.</div>
+<div>The T3 manual is available as a <a href="https://solgenomics.github.io/sgn/">Google Doc</a>. It was written for CassavaBase but T3 is based on CassavaBase, so the manual applies to T3 as well.</div>
 
 <h3>FAQ</h3>
 
