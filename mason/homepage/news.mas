@@ -1,0 +1,54 @@
+
+<%perl>
+
+use strict;
+
+my $file = $c->get_conf('homepage_files_dir') . '/news.txt';
+my $contents = do {
+    local $/ = undef;
+    open my $fh, "<", $file or die "could not open $file: $!";
+    <$fh>;
+};
+
+</%perl>
+
+
+<style>
+    .news-panel-body {
+        padding: 8px;
+        max-height: 500px;
+        overflow: auto;
+    }
+    .news-item {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+    .news-item-title {
+        font-weight: bold;
+        padding-top: 4px;
+        font-size: 110%;
+        margin: 0;
+    }
+    .news-item-date {
+        font-size: 90%;
+        color: #999;
+        margin: 0;
+    }
+    .news-item-content {
+        padding: 4px;
+    }
+    .news-item-content p {
+        margin-bottom: 2px;
+    }
+</style>
+
+
+<!-- NEWS PANEL -->
+<div class="panel panel-info">
+    <div class="panel-heading">News</div>
+    <div class="panel-body news-panel-body">
+        <% $contents %>
+    </div>
+</div>
+
