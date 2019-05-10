@@ -106,7 +106,10 @@ $show_accept_dialog => undef
             </a>
 
             <p>Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.</p>
-            <p>Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, or <strong>Traits</strong>.</p>
+            <p>
+                Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, 
+                <strong>Traits</strong>, <strong>Genoptyping Projects</strong>, or <strong>Markers</strong>
+            </p>
 
             <div class="row">
                 <div class="col-sm-4">
@@ -116,7 +119,13 @@ $show_accept_dialog => undef
                     <a href="/search/trials" class="btn btn-primary btn-large btn-search">Search Trials</a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="/tools/onto" class="btn btn-primary btn-large btn-search">Browse Traits</a>
+                    <a href="/search/traits" class="btn btn-primary btn-large btn-search">Search Traits</a>
+                </div>
+                <div class="col-sm-5">
+                    <a href="/search/genotyping_data_projects" class="btn btn-primary btn-large btn-search">Search Genotyping Projects</a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="/search/markers" class="btn btn-primary btn-large btn-search">Search Markers</a>
                 </div>
             </div>
 
@@ -137,6 +146,7 @@ $show_accept_dialog => undef
 
             <p>Contributing data to T3?</p>
             <p><strong>Manage your Phenotypic Data</strong> to create spreadsheets for new uploads, add new data, and/or manage your existing uploads.</p>
+            <p>Or <a href="/breeders/upload">Upload</a> various other types of data.</p>
 
             
 
