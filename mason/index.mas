@@ -139,14 +139,21 @@ $show_accept_dialog => undef
 
             <h2>Submit Data</h2>
 
+            <p>Contributing data to T3?</p>
+
             <a href="/breeders/phenotyping" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-open-file"></span>&nbsp;
+                <span class="glyphicon glyphicon-leaf"></span>&nbsp;
                 Manage Phenotypic Data
             </a>
 
-            <p>Contributing data to T3?</p>
             <p><strong>Manage your Phenotypic Data</strong> to create spreadsheets for new uploads, add new data, and/or manage your existing uploads.</p>
-            <p>Or <a href="/breeders/upload">Upload</a> various other types of data.</p>
+            
+            <a href="/breeders/upload" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-open-file"></span>&nbsp;
+                Upload Files
+            </a>
+
+            <p>Or <strong>Upload Files</strong> for various other types of data.</p>
 
             
 
