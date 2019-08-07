@@ -26,10 +26,8 @@ SGN
 ```
     sgn                               origin
    -----                             --------
-     |                                  |
-     |                                  |
-     |                                  |
-     V       git pull sgn master        V
+
+             git pull sgn master        
    master --------------------------> master
      ^                                  |
      |                                  | git merge master
