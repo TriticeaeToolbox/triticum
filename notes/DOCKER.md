@@ -56,6 +56,7 @@ The web container mounts the following host directories to docker directories:
 Where each variable is defined separately for each instance of the web container.
 
 **Example:** triticum
+
 | Variable | Definition |
 |-----------|-----------|
 | `$web_mnt_dir` | /opt/breedbase/mnt/triticum |
