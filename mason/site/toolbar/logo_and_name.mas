@@ -11,6 +11,12 @@
         padding: 2px 5px;
         margin-left: 10px;
     }
+    .sandbox {
+        font-size: 60%;
+        position: absolute;
+        left: 110px;
+        top: 30px;
+    }
 </style>
 
 
@@ -18,4 +24,4 @@
 
 <img id="sgnlogo" src="/static_content/img/t3.png" alt="New T3 Home" title="New T3 Home"></a>
 
-<a class="navbar-brand sgn_brand_name" href="/"><span class="new-t3">New</span> T3/Wheat</a>
+<a class="navbar-brand sgn_brand_name" href="/"><span class="new-t3">New</span> T3/Wheat <span class="sandbox">SANDBOX</span></a>

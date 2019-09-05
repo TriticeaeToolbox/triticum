@@ -1,4 +1,6 @@
-
+<div class="banner">
+  <p>SANDBOX SITE - Data added to this site will be periodically cleared</p>
+</div>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -28,11 +30,33 @@
 <br>
 
 <style>
+
+  .navbar {
+    margin-top: 30px;
+  }
+
+  .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #c84c30;
+    color: #FBFCFC;
+    text-align: center;
+    z-index: 999;
+  }
+  .banner p {
+    margin: 6px 0;
+  }
+
+
   li {
     margin-bottom:0;
   }
+  
   body {
-    padding-top: 30px;
+    padding-top: 60px;
   }
   
   @media (min-width: 0px) and (max-width: 768px) {
