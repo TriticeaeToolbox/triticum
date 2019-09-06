@@ -110,7 +110,7 @@ jQuery(document).ready(function () {
             jQuery('#submit_contact_form_response').modal('show');
         } else {
             jQuery.ajax ( {
-                url : '/ajax/contact_triticum/submit',
+                url : '/ajax/contact_smtp/submit',
                 type: "POST",
                 beforeSend: function(){
                     jQuery('#working_modal').modal('show');
