@@ -20,7 +20,7 @@ use Moose;
 use Data::Dumper;
 use LWP::UserAgent;
 use JSON;
-use MIME::Lite;
+use Mail::Sendmail;
 
 BEGIN { extends 'Catalyst::Controller::REST' }
 
@@ -30,7 +30,7 @@ __PACKAGE__->config(
     map       => { 'application/json' => 'JSON', 'text/html' => 'JSON' },
    );
 
-sub submit_contact_form : Path('/ajax/contact_triticum/submit') : ActionClass('REST') { }
+sub submit_contact_form : Path('/ajax/contact_smtp/submit') : ActionClass('REST') { }
 
 sub submit_contact_form_POST : Args(0) {
     my $self = shift;
@@ -41,38 +41,40 @@ sub submit_contact_form_POST : Args(0) {
     my $contact_body = $c->req->param('body');
 
     # Read Config Vars
-    my $contact_to = $c->config->{contact_to};
-    my $contact_from = $c->config->{contact_from};
+    my $contact_to = $c->config->{contact_email};
     my $smtp_server = $c->config->{smtp_server};
+    my $smtp_port = $c->config->{smtp_port};
     my $smtp_user = $c->config->{smtp_user};
     my $smtp_pass = $c->config->{smtp_pass};
+    my $smtp_from = $c->config->{smtp_from};
 
+    # Build Body of Message
+    my $body = "BreeDBase Contact Form Submission\nSite: " . $c->config->{main_production_site_url} . "\nSender: $contact_name <$contact_email>\n\n";
+    $body = $body . $contact_body;
 
     # Build the message
-    my $msg = MIME::Lite->new(
-        From => $contact_name . " <" . $contact_from . ">",
-        "Reply-To" => $contact_email,
-        To => $contact_to,
-        Subject => "[TB] [Feedback] " . $contact_subject,
-        Type => "TEXT",
-        Data => $contact_body
+    my %mail = (
+        To          => $contact_to,
+        From        => $smtp_from,
+        "Reply-To"  => $contact_email,
+        Subject     => "[Contact Us] " . $contact_subject,
+        Body        => $body
     );
 
-
-    # Try to send the message
-    eval {
-        $msg->send('smtp', $smtp_server, AuthUser => $smtp_user, AuthPass => $smtp_pass);   
+    # Set the SMTP Server and Auth
+    $mail{'server'} = $smtp_server . ":" . $smtp_port;
+    $mail{'auth'} = {
+        user     => $smtp_user,
+        password => $smtp_pass,
+        method   => 'DIGEST-MD5 CRAM-MD5 PLAIN LOGIN'
     };
 
-    # ERROR
-    if ($@) {
-        print STDERR Dumper $@;
-        $c->stash->{rest} = {error => 'The message could not be sent. Please try again later.<br /><br /><code>' . $@ . '</code>'};
-    }
-
-    # SUCCESS
-    else {
+    # Try to send the message
+    if ( sendmail(%mail) ) {
         $c->stash->{rest} = {success => 1};
+    }
+    else {
+        $c->stash->{rest} = {error => 'The message could not be sent. Please try again later.<br /><br />'};
     }
 
 }
