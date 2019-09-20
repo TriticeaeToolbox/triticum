@@ -261,23 +261,6 @@ function jqueryStuff() {
     <& /page/detail_page_2_col_section.mas, stock_id => $stock_id, info_section_title => "<h4 style='display:inline'>Genotype Marker Data</h4>", info_section_subtitle => 'View and download phenotypic data for this stock.', icon_class => "glyphicon glyphicon-map-marker", info_section_id => "stock_genotypes_section", buttons_html => '<a class="btn btn-default btn-sm" style="margin:3px" href = "/stock/'.$stock_id.'/genotypes">Download All Genotypes</a>', map_html => $map_html &>
 % }
 
-% if ($type_name eq 'accession'){
-
-<%perl>
-        my $collapsible = 0;
-        if ($has_pedigree==1) {
-            $collapsible = 1;
-        }
-        my $add_parent_link = '<button class="btn btn-primary btn-sm" style="margin:3px" id="add_parent_link" disabled>Add parent</button>';
-        if ($person_id && ($submitter || $curator || $sequencer)) { $add_parent_link = qq | <button class="btn btn-primary btn-sm" style="margin:3px" id="add_parent_link" >Add parent</button> |; }
-
-        my $remove_parent_link = '<button class="btn btn-default btn-sm" style="margin:3px" id="remove_parent_link" disabled>Remove parent</button>';
-        if ($person_id && ($submitter || $curator || $sequencer)) { $remove_parent_link = qq | <button class="btn btn-default btn-sm" style="margin:3px" id="remove_parent_link">Remove parent</button> |; }
-</%perl>
-
-    <& /page/detail_page_2_col_section.mas, stock_id => $stock_id, info_section_title => "<h4 style='display:inline'>Pedigree</h4>", info_section_subtitle => 'View and edit pedigree information.', icon_class => "glyphicon glyphicon-random", info_section_id => "stock_pedigree_section", buttons_html => $add_parent_link.$remove_parent_link, has_pedigree => $has_pedigree, info_section_collapsed => 0 &>
-% }
-
     <& /page/detail_page_2_col_section.mas, stock_id => $stock_id, info_section_title => "<h4 style='display:inline'>Related Stocks</h4>", info_section_subtitle => 'View any plots, plants, tissue_sample, and/or accessions that are linked to this stock.', icon_class => "glyphicon glyphicon-retweet", info_section_id => "stock_related_stock_section", stock_uniquename => $uniquename, type_name => $type_name &>
 
     <& /page/detail_page_2_col_section.mas, stock_id => $stock_id, info_section_title => "<h4 style='display:inline'>Images</h4>", info_section_subtitle => 'View and add images of this stock and of related stocks.', icon_class => "glyphicon glyphicon-camera", info_section_id => "stock_images_section", image_ids => $image_ids, related_image_ids => $related_image_ids, dbh => $dbh, buttons_html => qq|<a class="btn btn-sm btn-default" style="margin:3px" href="/image/add?type_id=$stock_id&action=new&type=stock&refering_page=$this_page">Add new image</a>| &>
