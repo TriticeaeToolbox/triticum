@@ -49,7 +49,7 @@ $is_owner
     <div class="panel panel-default">
         <div class="panel-body panel-body-sm">
 
-            <&| /page/info_section.mas, title => "Associated loci (" . $stockref->{allele_count} . ")" , subtitle => $new_locus_link, collapsible=> 1 , collapsed => 1 &>
+            <&| /page/info_section.mas, title => "Associated loci" , subtitle => $new_locus_link, collapsible=> 1 , collapsed => 1 &>
                 <& /phenome/associate_locus.mas, object_id => $stock_id , object_name => "stock", locus_add_uri=> $locus_add_uri,   allele_div => $allele_div , show_form => $is_owner &>
             </&>
         </div>
