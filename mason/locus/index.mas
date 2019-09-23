@@ -244,7 +244,7 @@ my $ontology_subtitle = $curator || $submitter || $sequencer  ?
 <br />
 
 <&| /page/info_section.mas, title=>"Associated Accessions (" .  scalar(@$accessions)  . ")", subtitle => "$stock_subtitle", id=>"locus_accessions", collapsible=>1, collapsed=>1 &>
-  <& /phenome/associated_accessions.mas , accessions=>$accessions, dbh=>$dbh &>
+  <& /phenome/associated_accessions.mas , alleles=>\@alleles, accessions=>$accessions, dbh=>$dbh &>
 </&>
 
 <br />
