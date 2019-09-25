@@ -71,8 +71,10 @@ $is_owner
 
 <div class="panel panel-default">
     <div class="panel-body panel-body-sm">
-        <b>Stock editors: </b>
-        <br/>
-        <% $editor_link %>
+
+        <&| /page/info_section.mas, title => "Stock editors", collapsible=> 1 , collapsed => 1 &>
+            <% $editor_link %>
+        </&>
+
     </div>
 </div>
