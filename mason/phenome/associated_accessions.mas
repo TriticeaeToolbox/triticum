@@ -59,6 +59,7 @@ my $schema = Bio::Chado::Schema->connect( sub { $dbh->clone }, );
 # %cols = hash with keys of allele names and each value
 # is an array of stock id/names associated with that allele
 my @headers;
+my %counts;
 my %cols;
 my $max = 0;
 
@@ -83,6 +84,7 @@ foreach my $allele (@$alleles) {
     }
 
     $cols{$allele_name} = \@_cols;
+    $counts{$allele_name} = $count;
   }
 }
 
@@ -96,7 +98,8 @@ $html .= qq|<table class="table table-hover table-condensed">|;
 
 $html .= qq|<thead><tr>|;
 foreach my $header (@headers) {
-  $html .= qq|<th align='left' class='columnar_table_noborder'>$header</th>|;
+  my $count = $counts{$header} && $counts{$header} > 0 ? '(' . $counts{$header} . ')' : '';
+  $html .= qq|<th align='left' class='columnar_table_noborder'>$header $count</th>|;
 }
 $html .= qq|</tr></thead>|;
 
