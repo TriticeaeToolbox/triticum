@@ -1,0 +1,124 @@
+
+
+<%doc>
+
+=head1 NAME
+
+/phenome/associated_accessions.mas - a component for printing accessions (aka stocks) associated with your favorite object (locus etc.)
+
+=head1 DESCRIPTION
+
+Requires the following javascript classes:
+<& /util/import_javascript.mas, classes => ["jquery", "thickbox", "CXGN.Page.FormattingHelpers"] &>
+
+
+
+Parameters:
+
+=over 3
+
+=item accessions
+
+arrayref of stokc_ids
+
+=item user_type (default undef)
+
+=item dbh
+
+a database handle
+
+=back
+
+=head1 AUTHOR
+
+Naama Menda <nm249@cornell.edu>
+
+=cut 
+
+</%doc>
+
+<%args>
+$alleles
+$accessions
+$dbh
+$user_type => undef
+
+</%args>
+
+<%perl>
+
+use CXGN::Page::FormattingHelpers qw / html_optional_show /;
+use Bio::Chado::Schema;
+use Data::Dumper;
+
+
+my $schema = Bio::Chado::Schema->connect( sub { $dbh->clone }, );
+
+
+# Generate Allele / Stock Relationship Hash
+# %cols = hash with keys of allele names and each value
+# is an array of stock id/names associated with that allele
+my @headers;
+my %counts;
+my %cols;
+my $max = 0;
+
+foreach my $allele (@$alleles) {
+  my $allele_name = $allele->get_allele_name();
+  my @allele_stock_ids = $allele->get_stock_ids();
+  my @_cols;
+
+  push @headers, $allele_name;
+
+  my $count = 0;
+  foreach my $stock_id_arr (@allele_stock_ids) {
+    foreach my $stock_id (@$stock_id_arr) {
+      my $stock = CXGN::Chado::Stock->new($schema, $stock_id);
+      my $stock_name = $stock->get_name();
+      my $h = qq|<a href="/stock/$stock_id/view">$stock_name</a>|;
+      push @_cols, $h;
+      $count = $count + 1;
+      if ( $count > $max ) {
+        $max = $count;
+      }
+    }
+
+    $cols{$allele_name} = \@_cols;
+    $counts{$allele_name} = $count;
+  }
+}
+
+
+# Generate HTML Table
+# Columns: Allele names
+# Rows: Lists of Stock names
+my $html;
+
+$html .= qq|<table class="table table-hover table-condensed">|;
+
+$html .= qq|<thead><tr>|;
+foreach my $header (@headers) {
+  my $count = $counts{$header} && $counts{$header} > 0 ? '(' . $counts{$header} . ')' : '';
+  $html .= qq|<th align='left' class='columnar_table_noborder'>$header $count</th>|;
+}
+$html .= qq|</tr></thead>|;
+
+$html .= qq|<tbody>|;
+for my $i (0 .. $max-1) {
+  $html .= qq|<tr>|;
+  for my $h (@headers) {
+    my $t = $cols{$h}[$i];
+    my $color = $i % 2 == 0 ? 'bgcoloralt1' : 'bgcoloralt2';
+    $html .= qq|<td class="columnar_table $color">$t</td>|;
+  }
+  $html .= qq|</tr>|;
+}
+$html .= qq|</tbody>|;
+
+$html .= qq|</table>|;
+
+</%perl>
+
+
+
+<% $html %>
