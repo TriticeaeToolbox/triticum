@@ -7,7 +7,7 @@ SGN
 
 **The main breeDBase web application**
 
-**Location:** `/home/production/cxgn/sgn/`
+**Location:** `/opt/breedbase/repos/sgn`
 
 ### Remotes
  
@@ -98,7 +98,7 @@ triticum
 
 **T3-specific mason templates, catalyst controllers and static resources**
 
-**Location:** `/home/production/cxgn/triticum/`
+**Location:** `/opt/breedbase/repos/triticum`
 
 ### Remotes
 
