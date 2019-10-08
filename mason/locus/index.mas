@@ -263,6 +263,26 @@ my $ontology_subtitle = $curator || $submitter || $sequencer  ?
 
 <br />
 
+<&| /page/info_section.mas,
+  title       =>"Ontology annotations ($ont_count)",
+  id          => "locus_ontology",
+  collapsible => 1,
+  collapsed   => 1,
+  subtitle    => $ontology_subtitle &>
+  <& /ontology/associate_ontology.mas,
+    trait_db_name => $trait_db_name,
+    object_id     => $locus_id ,
+    object_name   => "locus",
+    cvterm_add_uri=> $cvterm_add_uri,
+    ontology_url  => "/locus/$locus_id/ontologies/",
+    reference_uri => "/locus/$locus_id/references",
+    evidence_with_uri => "/locus/$locus_id/evidences",
+    show_form     => 1  &>
+</&>
+
+
+<br />
+
 % if($is_owner) {
   <&| /page/info_section.mas, title=>"Locus history", collapsible=>1, collapsed=>1 &>
          <& /locus/history.mas, locus=>$locus  &>

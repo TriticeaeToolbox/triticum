@@ -7,7 +7,7 @@ SGN
 
 **The main breeDBase web application**
 
-**Location:** `/home/production/cxgn/sgn/`
+**Location:** `/opt/breedbase/repos/sgn`
 
 ### Remotes
  
@@ -49,7 +49,7 @@ topic/xxx (sgn dev changes)         t3/master (T3 master branch)
 - **Change to the master branch**
     - `git checkout master`
 
-- **Pull from the sgn master branch**
+- **Pull changes from the master branch of the solgenomics/sgn GitHub repository**
     - `git pull sgn master`
 
 - **Restart the SGN web application**
@@ -57,10 +57,16 @@ topic/xxx (sgn dev changes)         t3/master (T3 master branch)
 
 - **Test the website**
     - Make sure there are no obvious problems
+    
+- **Update the master branch of the TriticeaeToolbox/sgn GitHub repository**
+    - `git push origin master`
 
 - **Merge the master branch into the t3/master branch**
     - `git checkout t3/master`
     - `git merge master`
+    
+- **Update the t3/master branch of the TriticeaeToolbos/sgn GitHub repository**
+    - `git push origin t3/master`
 
 - **Restart the SGN web application**
     - `systemctl restart sgn`
@@ -74,9 +80,6 @@ topic/xxx (sgn dev changes)         t3/master (T3 master branch)
     - `git pull sgn master`
 
 - **Make your changes**
-
-- **Get the lastest sgn master changes**
-    - `git pull sgn master`
 
 - **Add and commit your changes**
     - `git add [files]`
@@ -95,7 +98,7 @@ triticum
 
 **T3-specific mason templates, catalyst controllers and static resources**
 
-**Location:** `/home/production/cxgn/triticum/`
+**Location:** `/opt/breedbase/repos/triticum`
 
 ### Remotes
 
