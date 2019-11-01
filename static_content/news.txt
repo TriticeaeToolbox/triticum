@@ -11,48 +11,11 @@
 
 
 <div class="news-item">
-    <p class="news-item-title">T3 Phenotype Data Loaded</p>
-    <p class="news-item-date">March 13, 2019</p>
+    <p class="news-item-title">Accessions Added</p>
+    <p class="news-item-date">October 28, 2019</p>
     <div class="news-item-content">
-        <p>Information on data loaded from T3.</p>
-    </div>
-</div>
-
-<div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
-    <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-    </div>
-</div>
-
-<div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
-    <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-    </div>
-</div>
-
-<div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
-    <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
+        <p>About 70,000 individual accessions have been added.  They can be found on 
+        the <a href='https://wheat-ksu.triticeaetoolbox.org/search/phenotypes/stock'>Accession 
+        Search</a> page (Search &gt; Accessions and Plots).</p>
     </div>
 </div>
