@@ -14,8 +14,7 @@
     <p class="news-item-title">Accessions Added</p>
     <p class="news-item-date">October 28, 2019</p>
     <div class="news-item-content">
-        <p>About 70,000 individual accessions have been added.  They can be found on 
-        the <a href='https://wheat-ksu.triticeaetoolbox.org/search/phenotypes/stock'>Accession 
-        Search</a> page (Search &gt; Accessions and Plots).</p>
+        <p>About 70,000 individual accessions have been added.  They can be found on the 
+        <a href='/search/phenotypes/stock'>Accession Search</a> page (Search &gt; Accessions and Plots).</p>
     </div>
 </div>
