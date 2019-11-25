@@ -1,0 +1,238 @@
+<style>
+    p.intro {
+        margin: 5px 40px;
+    }
+
+    .section {
+        padding: 0 7px;
+        margin-top: 40px;
+        background-color: #eee;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .section h2 {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .section > ol > li {
+        margin-bottom: 15px;
+    }
+    .section ul > li.manual {
+        display: block;
+    }
+    .section ul > li.manual:before {
+        content: "\e085";
+        font-family: 'Glyphicons Halflings';
+        font-size: 12px;
+        float: left;
+        margin-top: 0px;
+        margin-left: -17px;
+        color: #000;
+    }
+</style>
+
+
+
+<& /page/page_title.mas, title=>"Phenotype Upload Instructions" &>
+
+<p class="intro">
+    These instructions will guide you through the process of creating a phenotype 
+    trial and uploading the results of the trial to T3.  In order to submit data, 
+    you must first <a href="/user/new">Create an Account</a> and <a href="#" id="intro-login">Login</a>.
+</p>
+<p class="intro">
+    If you have any questions about the process, please feel free 
+    to <a href="/contact/form">Contact Us</a>.
+</p>
+
+<div class="section">
+    <h2>Breeding Program</h2>
+    <p>All data (such as Accessions and Trials) are associated with a particular Breeding Program. Generally, 
+        we have a Breeding Program for each University / Institution that submits data to the database.</p>
+    <ol>
+        <li>Make sure your Breeding Program exists in the Database
+            <ul>
+                <li>View existing Breeding Programs: <a href="/breeders/manage_programs">Manage &gt; Breeding Programs</a></li>
+            </ul>
+        </li>
+        <li>If it is not listed, add it to the Database (by using the <strong>Add New Program</strong> button at the bottom of the page)
+            <ul>
+                <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_01.html">Managing 
+                Breeding Programs</a> manual page for more information.</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Locations</h2>
+    <p>A phenotyping trial must be linked to a specific location.  Generally, the location of a trial is set as the 
+    closest town to the actual field site.</p>
+    <ol>
+        <li>Make sure the Location of your Trial(s) exist in the Databse
+            <ul>
+                <li>Use the <a href="/breeders/locations">Manage &gt; Locations</a> page to search for existing Locations.</li>
+            </ul>
+        </li>
+        <li>If the one or more of your Locations don't exist in the database, you can add them by:
+            <ul>
+                <li>Finding the location on the <strong>Map</strong>, clicking, and filling out the location details form.</li>
+                <li>Uploading a <strong>File</strong> of location information.</li>
+                <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_02.html">Managing 
+                Locations</a> manual page for more information.</li>
+            </ul>
+        </li>
+        <li>Make sure your Breeding Program is associated with the location.
+            <ul>
+                <li>In the Location Table on the <a href="/breeders/locations">Manage &gt; Locations</a> page, the <strong>Program</strong> 
+                    column lists all of the Breeding Programs associated with each Location.</li>
+                <li>If your Breeding Program is NOT associated with the Location:
+                    <ol>
+                        <li>Find the location on the map</li>
+                        <li>Click the <strong>Edit</strong> link</li>
+                        <li>In the <strong>Program</strong> select box, <strong>ctrl-click</strong> / <strong>command-click</strong>
+                         your Breeding Program from the list to add it to the existing Breeding Programs already associated with the location.</li>
+                        <li>Click the <strong>Store Location Details</strong> button to save your changes.</li>
+                    </ol>
+                </li>
+        </li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Accessions</h2>
+    <p>Each Accession / line that is observed in a phenotype trial must have its own entry in the database.  In addition, 
+    the names used in your trial design must match the names of the Accessions in the database.</p>
+    <ol>
+        <li>Make sure your Accessions exist in the Database
+            <ul>
+                <li>Use the <a href="/search/phenotypes/stock">Search > Accessions &amp; Plots</a> page to search 
+                for the Accessions in your trial</li>
+            </ul>
+        </li>
+        <li>If one or more of your Accessions don't exist in the database, you can add them on the 
+        <a href="/breeders/accessions">Manage &gt; Accessions</a> page by clicking the 
+        <strong>Add Accessions or Upload Accession Info</strong> link in the top-right corner 
+        of that page.
+            <ul>
+                <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_03.html">Managing 
+                Accessions</a> manual page for more information.</li>
+                <li>If uploading a spreadsheet of Accessions, a minimum of these columns should be filled in:
+                    <ul>
+                        <li><strong>accession_name</strong>: the unique name of the accession</li>
+                        <li><strong>species_name</strong>: Triticum aestivum</li>
+                        <li><strong>organization_names(s):</strong> The Breeding Program(s) that originated the Accession</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Trials</h2>
+    <p>A phenotyping trial must exist in the database before the results can be added.  The Trial contains information about 
+    its location, plot and field size, design type, and plot layout.  A Trial can be added in two ways:</p>
+    <ul>
+        <li>
+            <strong>Using the trial design wizard:</strong> This will design a plot layout for you given lists 
+            of Accessions used as entries and controls, a trial design type, and layout parameters.  To design 
+            a new trial:
+            <ol>
+                <li>Make sure you have the Accessions used as entries (and optionally as controls) in a List</li>
+                <li>Go to the <a href="/breeders/trials">Manage &gt; Field Trials</a> page</li>
+                <li>Click the <strong>Design New Trial</strong> button in the top-right corner</li>
+            </ol>
+        </li>
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_07.html#371-adding-a-trial-by-using-add-trial-form">Trial 
+        Design</a> manual page for more information on adding a trial using the trial design wizard.</li>
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/01_basic_website_usage.html#working-with-lists">Working with Lists</a> 
+        manual page for more information on creating and managing lists</li>
+        <br />
+        <li>
+            <strong>Uploading a plot layout spreadhsheet:</strong> This option can be used if you've already 
+            generated the plot layout and you can create a spreadsheet describing the plot layout for the trial. 
+            To upload an existing trial design:
+            <ol>
+                <li>Go to the <a href="/breeders/trials">Manage &gt; Field Trials</a> page</li>
+                <li>Click the <strong>Upload Existing Trial</strong> button in the top-right corner</li>
+            </ol>
+        </li>
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_07.html#372-adding-a-trial-from-an-uploaded-file">Trial 
+        Upload</a> manual page for more information on uploading a trial design file.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Results</h2>
+    <p>Once a Trial has been created, phenotype observations can be added to the Trial.  If you use the 
+        <a href="http://phenoapps.org/all-courses/field-book/">Field Book</a> tablet app, you can create a file for 
+        recording your observations directly on Field Book.  If you already have data, you can download a spreadsheet 
+        template specifically for the trial.</p>
+    <ul>
+        <li><strong>Using Field Book:</strong>
+            <ol>
+                <li>Go to the Trial detail page for your trial
+                    <ul>
+                        <li>Go to the <a href="/search/trials">Trial Search</a> page</li>
+                        <li>Find your trial</li>
+                        <li>Click the name of your trial in the table to open the Trial detail page</li>
+                    </ul>
+                </li>
+                <li>Open the <strong>Upload Data Files</strong> section</li>
+                <li>Click the <strong>Create Field Book</strong> button
+                    <ul>
+                        <li>This file can then be used as a field layout file to collect data using the Android Field Book app</li>
+                    </ul>
+                </li>
+                <li>After data collection: Click the <strong>Upload</strong> button next to <strong>Android Field Book Exported</strong></li>
+                <li>Additional files, such as images or raw data files can be uploaded in the <strong>Upload Additional Files</strong> section</li>
+            </ol>
+        </li>
+        <li class="manual">View the <a href=https://solgenomics.github.io/sgn/03_managing_breeding_data/03_09.html">Using Field Book App</a> 
+        section in the manual for more information on collecting field data using the Android tablet app.</li>
+        <br />
+        <li><strong>Uploading Existing Data:</strong>
+            <ol>
+                <li>Create a list of Traits that were observed in your trial</li>
+                <li>Go to the Trial detail page for your trial
+                    <ul>
+                        <li>Go to the <a href="/search/trials">Trial Search</a> page</li>
+                        <li>Find your trial</li>
+                        <li>Click the name of your trial in the table to open the Trial detail page</li>
+                    </ul>
+                </li>
+                <li>Open the <strong>Upload Data Files</strong> section</li>
+                <li>Click the <strong>Create Spreadsheet</strong> button next to <strong>Phenotyping Spreadsheets</strong>
+                    <ul>
+                        <li><strong>Trait List:</strong> The list of Traits observed in this Trial</li>
+                        <li><strong>Spreadsheet Format:</strong> Simple</li>
+                        <li><strong>Data Level:</strong> Plots (for both plot-level data AND trial-mean data)
+                            <ul>
+                                <li><strong>For plot-level data:</strong> Observations at the individual plots can be recorded in each separate plot</li>
+                                <li><strong>For trial-mean data:</strong> Trial means for each trait will be recorded as a single observation in one plot for each Accession</li>
+                            </ul>
+                        </li>
+                        <li>This will create a template, for this specific trial, for adding phenotype observations to</li>
+                    </ul>
+                </li>
+                <li>Once data has been entered into the template: Click the <strong>Upload</strong> button next to <strong>Phenotyping Spreadsheets</strong>
+                to add the recorded observations.</li>
+                <li>Additional files, such as images or raw data files can be uploaded in the <strong>Upload Additional Files</strong> section</li>
+            </ol>
+        </li>
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_10.html#3102-uploading-spreadsheet-phenotypes">Uploading 
+        Spreadsheet Phenotypes</a> manual page for more information on uploading phenotype data as a spreadsheet.</li>
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/01_basic_website_usage.html#working-with-lists">Working with Lists</a> 
+        manual page for more information on creating and managing lists</li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#intro-login").on("click", function() {
+            $('#site_login_dialog').modal("show");
+        });
+    });
+</script>

@@ -141,6 +141,13 @@ $show_accept_dialog => undef
 
             <p>Contributing data to T3?</p>
 
+            <a href="/help/phenotype_upload_workflow" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-pushpin"></span>&nbsp;
+                Upload Instructions
+            </a>
+
+            <p><strong>Phenotype Upload Instructions:</strong> Instructions and general steps for adding phenotype trial data to T3.</p>
+
             <a href="/breeders/phenotyping" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-leaf"></span>&nbsp;
                 Manage Phenotypic Data
