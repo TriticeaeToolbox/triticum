@@ -12,47 +12,29 @@
 
 <div class="news-item">
     <p class="news-item-title">T3 Phenotype Data Loaded</p>
-    <p class="news-item-date">March 13, 2019</p>
+    <p class="news-item-date">Nov 29, 2019</p>
     <div class="news-item-content">
-        <p>Information on data loaded from T3.</p>
+        <p>2456 Phenotype trials and mean data loaded from T3.</p>
     </div>
 </div>
 
 <div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
+    <p class="news-item-title">Analyze, Selection Index</p>
     <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
+        <p>The <a href=selection/index>Selection Index</a> determines rankings of accessions based on more than one trait</p>
     </div>
 </div>
 
 <div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
+    <p class="news-item-title">Analyze, Summarize Trials</p>
     <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
+        <p><a href=tools/trial/summary/list>Summarize Trials</a> shows Least squares mean values in selected Trials</p>
     </div>
 </div>
 
 <div class="news-item">
-    <p class="news-item-title">News Item Title</p>
-    <p class="news-item-date">March 10, 2019</p>
+    <p class="news-item-title">Search, Loci & Genes</p>
     <div class="news-item-content">
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
-        <p>Put news item content here.</p>
-        <p>It can contain any HTML.</p>
+        <p><a href=search/locus>Search Loci & Genes</a> allows you to search for genetic characters and associated accessions</p>
     </div>
 </div>
