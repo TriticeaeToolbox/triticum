@@ -9,6 +9,15 @@
 </div>
 -->
 
+<div class="news-item">
+    <p class="news-item-title">Scab Forum Presentation</p>
+    <p class="news-item-date">Dec 9, 2019</p>
+    <div class="news-item-content">
+        <p>The presentation (with step-by-step screenshots of the demos) of T3/Breedbase given at 
+        the 2019 Wheat &amp; Barley Scab Forum can be found 
+        <a href="/static_content/files/2019ScabForum.pdf">here</a>.</p>
+    </div>
+</div>
 
 <div class="news-item">
     <p class="news-item-title">T3 Phenotype Data Loaded</p>
