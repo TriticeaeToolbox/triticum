@@ -9,3 +9,11 @@
 </div>
 -->
 
+<div class="news-item">
+    <p class="news-item-title">Accessions Added</p>
+    <p class="news-item-date">Jan 9, 2020</p>
+    <div class="news-item-content">
+        <p>~600 Accessions from 2017 have been added to the database.  To view the Accessions go to 
+        the <a href="/search/stocks">Search &gt; Accessions and Plots</a> page.</p>
+    </div>
+</div>
