@@ -1,3 +1,7 @@
+<%args>
+$user_roles => 'unknown'
+</%args>
+
 <style>
     p.intro {
         margin: 5px 40px;
@@ -29,6 +33,26 @@
         margin-left: -17px;
         color: #000;
     }
+
+    a.btn {
+        color: #fff;
+    }
+    a.btn:hover {
+        background-color: #286090 !important;
+        color: #fff !important;
+    }
+
+    #account-prompts {
+        display: none;
+        margin: 15px;
+    }
+    #account-prompts p {
+        margin: 10px 0 0 0;
+    }
+
+    #account-status {
+        display: none;
+    }
 </style>
 
 
@@ -37,13 +61,43 @@
 
 <p class="intro">
     These instructions will guide you through the process of creating a phenotype 
-    trial and uploading the results of the trial to T3.  In order to submit data, 
-    you must first <a href="/user/new">Create an Account</a> and <a href="#" id="intro-login">Login</a>.
+    trial and uploading the results of the trial to T3.
 </p>
 <p class="intro">
     If you have any questions about the process, please feel free 
     to <a href="/contact/form">Contact Us</a>.
 </p>
+
+<div class="section">
+    <h2>User Account</h2>
+    <p>In order to submit data to the database, you must have an account with at least submitter privileges.  All accounts 
+    created on the sandbox are automatically given submitter status.</p>
+
+    <div id="account-prompts">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/user/new" class="btn btn-primary btn-large btn-home">
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                        Create Account
+                </a>
+                <br />
+                <p>Create a new account if you don't already have one</p>
+            </div>
+            <div class="col-md-6">
+                <a id="account-prompts-login" href="#" class="btn btn-primary btn-large btn-home">
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                        Login
+                </a>
+                <br />
+                <p>Login to your existing account</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="account-status">
+        <p><strong>Account Status:</strong> <% $user_roles %></p>
+    </div>
+</div>
 
 <div class="section">
     <h2>Breeding Program</h2>
@@ -231,7 +285,16 @@
 
 <script type="text/javascript">
     $( document ).ready(function() {
-        $("#intro-login").on("click", function() {
+        $("#account-prompts").css(
+            "display", 
+            $.cookie("sgn_session_id") == "" ? "block" : "none"
+        );
+        $("#account-status").css(
+            "display", 
+            $.cookie("sgn_session_id") == "" ? "none" : "block"
+        );
+
+        $("#account-prompts-login").on("click", function() {
             $('#site_login_dialog').modal("show");
         });
     });
