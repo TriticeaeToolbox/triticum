@@ -35,6 +35,17 @@ $show_accept_dialog => undef
     .btn-search:hover, .btn-search:active, .btn-search:focus {
         background-color: #C0D4DE !important;
     }
+    #account-prompts {
+        display: none;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 10px 5px 10px;
+        margin: 10px 0 25px 0;
+    }
+    #upload-instructions li {
+        margin-bottom: 15px;
+    }
 </style>
 
 
@@ -100,12 +111,32 @@ $show_accept_dialog => undef
             
             <h2>Explore T3</h2>
 
+            <div id="account-prompts">
+                <a href="/user/new" class="btn btn-primary btn-large btn-home">
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                        Create Account
+                </a>
+                <p>
+                    To view most of the data on T3, you'll first need to create an account.
+                </p>
+
+                <br />
+
+                <a href="/user/login?goto_url=/" class="btn btn-primary btn-large btn-home">
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                        Login
+                </a>
+                <p>If you already have an account, login to get full access.</p>
+            </div>
+
+
             <a href="/breeders/search" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-search"></span>&nbsp;
                 Open Search Wizard
             </a>
 
             <p>Use the <strong>Search Wizard</strong> to explore the database using various types of metadata.</p>
+            <br />
             <p>
                 Alternatively, you can search specifically for <strong>Accessions</strong>, <strong>Trials</strong>, 
                 <strong>Traits</strong>, <strong>Genoptyping Projects</strong>, or <strong>Markers</strong>
@@ -139,29 +170,33 @@ $show_accept_dialog => undef
 
             <h2>Submit Data</h2>
 
-            <p>Contributing data to T3?</p>
-
-            <a href="/help/phenotype_upload_workflow" class="btn btn-primary btn-large btn-home">
+            <a href="https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-pushpin"></span>&nbsp;
-                Upload Instructions
+                    Upload Instructions
             </a>
+            <p>
+                Data submitted to T3 should be in the format of the upload 
+                template for the data type you are submitting.  <strong>View the upload 
+                instructions</strong> for specific information on each data type.
+            </p>
 
-            <p><strong>Phenotype Upload Instructions:</strong> Instructions and general steps for adding phenotype trial data to T3.</p>
-
-            <a href="/breeders/phenotyping" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-leaf"></span>&nbsp;
-                Manage Phenotypic Data
+            <a href="https://wheat-sandbox.triticeaetoolbox.org/" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                    T3/Wheat Sandbox
             </a>
+            <p>
+                Once you have your upload templates, you can test-load them on the <strong>T3/Wheat Sandbox</strong> 
+                to check for any errors.
+            </p>
 
-            <p><strong>Manage your Phenotypic Data</strong> to create spreadsheets for new uploads, add new data, and/or manage your existing uploads.</p>
-            
-            <a href="/breeders/upload" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-open-file"></span>&nbsp;
-                Upload Files
+            <a href="/submit" class="btn btn-primary btn-large btn-home">
+                <span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;
+                    Submit Upload Templates
             </a>
-
-            <p>Or <strong>Upload Files</strong> for various other types of data.</p>
-
+            <p>
+                When you are ready to add your data to T3, you can <strong>submit your upload templates</strong> 
+                to be added to the main T3/Wheat database.
+            </p>
             
 
             <br /><br /><br />
@@ -206,3 +241,12 @@ $show_accept_dialog => undef
     <& /homepage/usage_popup.mas &>
 
 </div>
+
+
+
+<script type="text/javascript">
+    $("#account-prompts").css(
+        "display", 
+        $.cookie("sgn_session_id") == "" ? "block" : "none"
+    );
+</script>
