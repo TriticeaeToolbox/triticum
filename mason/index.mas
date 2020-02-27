@@ -122,7 +122,7 @@ $show_accept_dialog => undef
 
                 <br />
 
-                <a href="/user/login?goto_url=/" class="btn btn-primary btn-large btn-home">
+                <a id="account-prompts-login" href="#" class="btn btn-primary btn-large btn-home">
                     <span class="glyphicon glyphicon-user"></span>&nbsp;
                         Login
                 </a>
@@ -245,8 +245,16 @@ $show_accept_dialog => undef
 
 
 <script type="text/javascript">
-    $("#account-prompts").css(
-        "display", 
-        $.cookie("sgn_session_id") == "" ? "block" : "none"
-    );
+    $( document ).ready(function() {
+        if ( !$.cookie("sgn_session_id") || $.cookie("sgn_session_id") == "" ) {
+            $("#account-prompts").css("display", "block");
+        }
+        else {
+            $("#account-prompts").css("display", "none");
+        }
+
+        $("#account-prompts-login").on("click", function() {
+            $('#site_login_dialog').modal("show");
+        });
+    });
 </script>

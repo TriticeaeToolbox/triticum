@@ -34,6 +34,21 @@ $user_roles => 'unknown'
         color: #000;
     }
 
+    .section-submit {
+        background-color: #ccc;
+        margin: 0 -8px -12px -8px;
+        padding: 7px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .section-submit h3 {
+        color: #000;
+        margin: 0 0 10px 0;
+    }
+    .section-submit ul li {
+        margin-bottom: 5px;
+    }
+
     a.btn {
         color: #fff;
     }
@@ -116,6 +131,14 @@ $user_roles => 'unknown'
             </ul>
         </li>
     </ol>
+
+    <div class="section-submit">
+        <h3>Submission</h3>
+        <ul>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Fill out the <strong>Request New Breeding Program</strong> form</li>
+        </ul>
+    </div>
 </div>
 
 <div class="section">
@@ -285,14 +308,14 @@ $user_roles => 'unknown'
 
 <script type="text/javascript">
     $( document ).ready(function() {
-        $("#account-prompts").css(
-            "display", 
-            $.cookie("sgn_session_id") == "" ? "block" : "none"
-        );
-        $("#account-status").css(
-            "display", 
-            $.cookie("sgn_session_id") == "" ? "none" : "block"
-        );
+        if ( !$.cookie("sgn_session_id") || $.cookie("sgn_session_id") == "" ) {
+            $("#account-prompts").css("display", "block");
+            $("#account-status").css("display", "none");
+        }
+        else {
+            $("#account-prompts").css("display", "none");
+            $("#account-status").css("display", "block");
+        }
 
         $("#account-prompts-login").on("click", function() {
             $('#site_login_dialog').modal("show");
