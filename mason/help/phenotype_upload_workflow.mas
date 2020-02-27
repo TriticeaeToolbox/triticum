@@ -33,6 +33,10 @@ $user_roles => 'unknown'
         margin-left: -17px;
         color: #000;
     }
+    .section h3 {
+        color: #000;
+        margin: 0 0 10px 0;
+    }
 
     .section-submit {
         background-color: #ccc;
@@ -40,10 +44,6 @@ $user_roles => 'unknown'
         padding: 7px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-    }
-    .section-submit h3 {
-        color: #000;
-        margin: 0 0 10px 0;
     }
     .section-submit ul li {
         margin-bottom: 5px;
@@ -118,6 +118,8 @@ $user_roles => 'unknown'
     <h2>Breeding Program</h2>
     <p>All data (such as Accessions and Trials) are associated with a particular Breeding Program. Generally, 
         we have a Breeding Program for each University / Institution that submits data to the database.</p>
+
+    <h3>Testing</h3>
     <ol>
         <li>Make sure your Breeding Program exists in the Database
             <ul>
@@ -136,7 +138,8 @@ $user_roles => 'unknown'
         <h3>Submission</h3>
         <ul>
             <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
-            <li>Fill out the <strong>Request New Breeding Program</strong> form</li>
+            <li>Select <strong>Breeding Program</strong> as the data type</li>
+            <li>Fill out the Breeding Program Request form</li>
         </ul>
     </div>
 </div>
