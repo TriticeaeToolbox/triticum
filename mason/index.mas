@@ -117,7 +117,7 @@ $show_accept_dialog => undef
                         Create Account
                 </a>
                 <p>
-                    To view most of the data on T3, you'll first need to create an account.
+                    To view most of the data on T3, you'll first need to create a free account.
                 </p>
 
                 <br />
@@ -168,7 +168,10 @@ $show_accept_dialog => undef
             
             <!-- SUBMISSIONS -->
 
-            <h2>Submit Data</h2>
+            <h2>Submit Phenotype Data</h2>
+
+
+            <h3>Step 1: Create Upload Templates</h3>
 
             <a href="https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-pushpin"></span>&nbsp;
@@ -180,6 +183,9 @@ $show_accept_dialog => undef
                 instructions</strong> for specific information on each data type.
             </p>
 
+
+            <h3>Step 2: Test-load Upload Templates</h3>
+
             <a href="https://wheat-sandbox.triticeaetoolbox.org/" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
                     T3/Wheat Sandbox
@@ -188,6 +194,9 @@ $show_accept_dialog => undef
                 Once you have your upload templates, you can test-load them on the <strong>T3/Wheat Sandbox</strong> 
                 to check for any errors.
             </p>
+
+
+            <h3>Step 3: Submit Upload Templates</h3>
 
             <a href="/submit" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;
