@@ -114,8 +114,13 @@
             <input type="file" class="form-control" id="locations-file" name="locations-file" accept=".xls">
         </div>
 
+
+        <!-- Accessions -->
         <div id="accessions-group" class="data-type-group">
-            <p>Accessions</p>
+            <h3>Accession Upload Template</h3>
+            <p>Upload an Excel (.xls) file containing accession information for any new or modified accessions</p>
+
+            <input type="file" class="form-control" id="accessions-file" name="accessions-file" accept=".xls">
         </div>
 
 
