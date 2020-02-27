@@ -126,7 +126,7 @@ $user_roles => 'unknown'
                 <li>View existing Breeding Programs: <a href="/breeders/manage_programs">Manage &gt; Breeding Programs</a></li>
             </ul>
         </li>
-        <li>If it is not listed, add it to the Database (by using the <strong>Add New Program</strong> button at the bottom of the page)
+        <li>If it is not listed, add it to the Database (by using the <strong>Add New Program</strong> button at the bottom of the Breeding Programs page)
             <ul>
                 <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_01.html">Managing 
                 Breeding Programs</a> manual page for more information.</li>
@@ -148,16 +148,20 @@ $user_roles => 'unknown'
     <h2>Locations</h2>
     <p>A phenotyping trial must be linked to a specific location.  Generally, the location of a trial is set as the 
     closest town to the actual field site.</p>
+
+    <h3>Testing</h3>
     <ol>
         <li>Make sure the Location of your Trial(s) exist in the Databse
             <ul>
                 <li>Use the <a href="/breeders/locations">Manage &gt; Locations</a> page to search for existing Locations.</li>
             </ul>
         </li>
-        <li>If the one or more of your Locations don't exist in the database, you can add them by:
+        <li>If the one or more of your Locations don't exist in the database, you can add them by uploading a file of location information
             <ul>
-                <li>Finding the location on the <strong>Map</strong>, clicking, and filling out the location details form.</li>
-                <li>Uploading a <strong>File</strong> of location information.</li>
+                <li>Go to the <a href="/breeders/locations">Manage &gt; Locations</a> page</li>
+                <li>Click the <strong>Upload New Locations</strong> button</li>
+                <li>Create an Excel (.xls) file with the specified headers</li>
+                <li>Upload the file</li>
                 <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_02.html">Managing 
                 Locations</a> manual page for more information.</li>
             </ul>
@@ -177,6 +181,15 @@ $user_roles => 'unknown'
                 </li>
         </li>
     </ol>
+
+    <div class="section-submit">
+        <h3>Submission</h3>
+        <ul>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Select <strong>Locations</strong> as the data type</li>
+            <li>Upload your locations template with any new or modified locations</li>
+        </ul>
+    </div>
 </div>
 
 <div class="section">
