@@ -106,9 +106,12 @@
         </div>
 
 
-
+        <!-- Locations -->
         <div id="locations-group" class="data-type-group">
-            <p>Locations</p>
+            <h3>Location Upload Template</h3>
+            <p>Upload an Excel (.xls) file containing location information for any new or modified locations</p>
+
+            <input type="file" class="form-control" id="locations-file" name="locations-file" accept=".xls">
         </div>
 
         <div id="accessions-group" class="data-type-group">
