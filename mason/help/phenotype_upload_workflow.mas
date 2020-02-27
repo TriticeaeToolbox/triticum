@@ -159,7 +159,7 @@ $user_roles => 'unknown'
         <li>If the one or more of your Locations don't exist in the database, you can add them by uploading a file of location information
             <ul>
                 <li>Go to the <a href="/breeders/locations">Manage &gt; Locations</a> page</li>
-                <li>Click the <strong>Upload New Locations</strong> button</li>
+                <li>Click the <strong>Upload New Locations</strong> link in the top right corner of that page</li>
                 <li>Create an Excel (.xls) file with the specified headers</li>
                 <li>Upload the file</li>
                 <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_02.html">Managing 
@@ -195,31 +195,46 @@ $user_roles => 'unknown'
 <div class="section">
     <h2>Accessions</h2>
     <p>Each Accession / line that is observed in a phenotype trial must have its own entry in the database.  In addition, 
-    the names used in your trial design must match the names of the Accessions in the database.</p>
+    the line names used in your trial design must match the names of the Accessions in the database.</p>
+
+    <h3>Testing</h3>
     <ol>
         <li>Make sure your Accessions exist in the Database
             <ul>
-                <li>Use the <a href="/search/phenotypes/stock">Search > Accessions &amp; Plots</a> page to search 
+                <li>Use the <a href="/search/phenotypes/stock">Search &gt; Accessions &amp; Plots</a> page to search 
                 for the Accessions in your trial</li>
             </ul>
         </li>
-        <li>If one or more of your Accessions don't exist in the database, you can add them on the 
-        <a href="/breeders/accessions">Manage &gt; Accessions</a> page by clicking the 
-        <strong>Add Accessions or Upload Accession Info</strong> link in the top-right corner 
-        of that page.
+        <li>If one or more of your Accessions don't exist in the database, you can add them by uploading a file of 
+            Accession information
             <ul>
-                <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_03.html">Managing 
-                Accessions</a> manual page for more information.</li>
-                <li>If uploading a spreadsheet of Accessions, a minimum of these columns should be filled in:
+                <li>Go to the <a href="/breeders/accessions">Manage &gt; Accessions</a> page</li>
+                <li>Click the <strong>Add Accessions or Upload Accession Info</strong> link in the top-right 
+                    corner of that page.</li>
+                <li>Click the <strong>Uploading a File</strong> tab</li>
+                <li>Create an Excel (.xls) file with the specified headers (Click <em>Spreadsheet format</em> for more info)</li>
+                <li>When creating a spreadsheet of Accessions, a minimum of these columns should be filled in:
                     <ul>
                         <li><strong>accession_name</strong>: the unique name of the accession</li>
                         <li><strong>species_name</strong>: Triticum aestivum</li>
                         <li><strong>organization_names(s):</strong> The Breeding Program(s) that originated the Accession</li>
                     </ul>
                 </li>
+                <li>Upload the Accessions template</li>
+                <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_03.html">Managing 
+                Accessions</a> manual page for more information.</li>
             </ul>
         </li>
     </ol>
+
+    <div class="section-submit">
+        <h3>Submission</h3>
+        <ul>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Select <strong>Accessions</strong> as the data type</li>
+            <li>Upload your accessions template with any new or modified accessions</li>
+        </ul>
+    </div>
 </div>
 
 <div class="section">
