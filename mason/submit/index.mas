@@ -51,7 +51,7 @@
 
         <!-- Name -->
         <div class="row form-group">
-            <label class="col-sm-2 control-label">Name: </label>
+            <label class="col-sm-2 control-label">Name*: </label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" value="" name="name"></input>
             </div>
@@ -59,7 +59,7 @@
 
         <!-- Email -->
         <div class="row form-group">
-            <label class="col-sm-2 control-label">Email: </label>
+            <label class="col-sm-2 control-label">Email*: </label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" value="" name="email"></input>
             </div>
@@ -89,7 +89,7 @@
 
             <!-- Breeding Program Name -->
             <div class="row form-group">
-                <label class="col-sm-2 control-label">Name: </label>
+                <label class="col-sm-2 control-label">Name*: </label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" value="" name="breeding-program-name"></input>
                 </div>
@@ -97,7 +97,7 @@
 
             <!-- Breeding Program Description -->
             <div class="row form-group">
-                <label class="col-sm-2 control-label">Description: </label>
+                <label class="col-sm-2 control-label">Description*: </label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" value="" name="breeding-program-description"></input>
                 </div>
@@ -126,7 +126,7 @@
 
         <!-- Trials -->
         <div id="trials-group" class="data-type-group">
-            <h3>Accession Upload Template</h3>
+            <h3>Trial Upload Template(s)</h3>
             <p>
                 Upload one or more trial templates (Excel (.xls) files) that contain the trial metadata and plot 
                 layout information for each new trial.  If you designed the trial interactively on the website, 
@@ -138,6 +138,13 @@
             <input type="file" class="form-control" id="trials-file" name="accessions-file" accept=".xls" multiple>
         </div>
 
+
+
+        <h3>Comments</h3>
+
+        <p><em>Optional</em> - Provide any additional comments about the data you are submitting.</p>
+
+        <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
 
 
         <br /><br />
