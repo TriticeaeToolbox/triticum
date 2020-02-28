@@ -90,7 +90,7 @@ $user_roles => 'unknown'
 
     <div id="account-prompts">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <a href="/user/new" class="btn btn-primary btn-large btn-home">
                     <span class="glyphicon glyphicon-user"></span>&nbsp;
                         Create Account
@@ -98,7 +98,8 @@ $user_roles => 'unknown'
                 <br />
                 <p>Create a new account if you don't already have one</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-2"><br /></div>
+            <div class="col-md-5">
                 <a id="account-prompts-login" href="#" class="btn btn-primary btn-large btn-home">
                     <span class="glyphicon glyphicon-user"></span>&nbsp;
                         Login
@@ -126,8 +127,10 @@ $user_roles => 'unknown'
                 <li>View existing Breeding Programs: <a href="/breeders/manage_programs">Manage &gt; Breeding Programs</a></li>
             </ul>
         </li>
-        <li>If it is not listed, add it to the Database (by using the <strong>Add New Program</strong> button at the bottom of the Breeding Programs page)
+        <li>If it is not listed, add it to the Database:
             <ul>
+                <li>Go to the <a href="/breeders/manage_programs">Manage &gt; Breeding Programs</a> page</li>
+                <li>Click the <strong>Add New Program</strong> button at the bottom of the page</li>
                 <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_01.html">Managing 
                 Breeding Programs</a> manual page for more information.</li>
             </ul>
@@ -240,35 +243,104 @@ $user_roles => 'unknown'
 <div class="section">
     <h2>Trials</h2>
     <p>A phenotyping trial must exist in the database before the results can be added.  The Trial contains information about 
-    its location, plot and field size, design type, and plot layout.  A Trial can be added in two ways:</p>
+    its location, plot and field size, design type, and plot layout.  A Trial can be added in multiple ways:</p>
     <ul>
         <li>
-            <strong>Using the trial design wizard:</strong> This will design a plot layout for you given lists 
+            <strong>Option A - Using the trial design wizard:</strong> This will design a plot layout for you given lists 
             of Accessions used as entries and controls, a trial design type, and layout parameters.  To design 
             a new trial:
             <ol>
                 <li>Make sure you have the Accessions used as entries (and optionally as controls) in a List</li>
                 <li>Go to the <a href="/breeders/trials">Manage &gt; Field Trials</a> page</li>
                 <li>Click the <strong>Design New Trial</strong> button in the top-right corner</li>
+                <li>Fill out the Trial metadata form</li>
+                <li>Select the lists of Accessions for entries and optionally checks</li>
+                <li>Select the plot layout parameters</li>
+                <li>Review the generated plot layout</li>
+                <li>Save the Trial and its plot layout to the database</li>
             </ol>
         </li>
         <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_07.html#371-adding-a-trial-by-using-add-trial-form">Trial 
         Design</a> manual page for more information on adding a trial using the trial design wizard.</li>
         <li class="manual">View the <a href="https://solgenomics.github.io/sgn/01_basic_website_usage.html#working-with-lists">Working with Lists</a> 
         manual page for more information on creating and managing lists</li>
+        
         <br />
+        
         <li>
-            <strong>Uploading a plot layout spreadhsheet:</strong> This option can be used if you've already 
-            generated the plot layout and you can create a spreadsheet describing the plot layout for the trial. 
+            <strong>Option B - Uploading a plot layout spreadsheet for a <em>single</em> trial:</strong> This option can be used if 
+            you've already generated the plot layout and you can create a spreadsheet describing the plot layout for the trial. 
             To upload an existing trial design:
             <ol>
                 <li>Go to the <a href="/breeders/trials">Manage &gt; Field Trials</a> page</li>
-                <li>Click the <strong>Upload Existing Trial</strong> button in the top-right corner</li>
+                <li>Click the <strong>Upload Existing Trial(s)</strong> button in the top-right corner</li>
+                <li>On Step 2, select the <strong>Single Trial Design</strong> tab</li>
+                <li>
+                    Create an Excel (.xls) file that describes the plot layout with the specified headers 
+                    (Click <em>Single trial spreadsheet</em> for more information).  The following columns 
+                    are required:
+                    <ul>
+                        <li>plot_name - which must be unique across the database (ie: UEOPN_Urbana_2019-plot1)</li>
+                        <li>accession_name - must match an existing Accession</li>
+                        <li>plot_number - must be unique within this trial</li>
+                        <li>block_number</li>
+                    </ul>
+                </li>
+                <li>Fill out the Trial metadata form</li>
+                <li>Upload the plot layout template</li>
+                <li>Review any possible errors in the trial and/or its design</li>
+                <li>Save the Trial and its plot layout to the database</li>
             </ol>
         </li>
         <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_07.html#372-adding-a-trial-from-an-uploaded-file">Trial 
         Upload</a> manual page for more information on uploading a trial design file.</li>
+
+        <br />
+
+        <li>
+            <strong>Option C - Uploading a plot layout spreadhseet for <em>multiple</em> trials:</strong> This option can be used 
+            for uploading multiple trials at a time by generating a spreadsheet containing the trial metadata and plot layout 
+            information.  This option does not require filling out the trial metadata form for each trial.  To upload multiple 
+            existing trial designs:
+            <ol>
+                <li>Go to the <a href="/breeders/trials">Manage &gt; Field Trials</a> page</li>
+                <li>Click the <strong>Upload Existing Trial(s)</strong> button in the top-right corner</li>
+                <li>On Step 2, select the <strong>Multiple Trial Designs</strong> tab</li>
+                <li>Create an Excel (.xls) file that includes the trial metadata and plot layout for each trial with the 
+                    specified headers (Click <em>Multiple trial spreadsheet</em> for more information, including required 
+                    columns and the data required for each column).
+                <li>Upload the trial design template</li>
+                <li>Review any possible errors in the trials and/or their design</li>
+                <li>Save the Trials and their plot layouts to the database</li>
+            </ol>
+        </li>
     </ul>
+
+    <div class="section-submit">
+        <h3>Submission</h3>
+        <p>
+            A trial template will be needed in order to submit any new trials.  If using <strong>Option C</strong>, 
+            the multiple trial design template you created can be used for submission.  If using <strong>Option A</strong> 
+            or <strong>Option B</strong>, a trial design template will need to be downloaded for each trial you created.  
+            This can be downloaded from the Trial Detail page of your new trials:
+        </p>
+        <ul>
+            <li>Go to the <a href="breeders/trials">Manage &gt; Field Trials</a> page</li>
+            <li>Find the trial(s) that you added</li>
+            <li>Double click the trial name(s) to open the Trial Detail page(s)</li>
+            <li>
+                Under the <strong>Trial Details</strong> section, click the 
+                <strong>Export Trial Details</strong> button to download a trial 
+                details template for the trial
+            </li>
+        </ul>
+        <p>Once you have the trial template(s) for all of your new trials:</p>
+        <ul>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Select <strong>Trials</strong> as the data type</li>
+            <li>Upload your trial template(s) for all new trials</li>
+        </ul>
+    </div>
 </div>
 
 <div class="section">

@@ -43,6 +43,9 @@ $show_accept_dialog => undef
         padding: 10px 10px 5px 10px;
         margin: 10px 0 25px 0;
     }
+    #account-prompts p {
+        margin-top: 10px;
+    }
     #upload-instructions li {
         margin-bottom: 15px;
     }
@@ -113,8 +116,7 @@ $show_accept_dialog => undef
 
             <div id="account-prompts">
                 <a href="/user/new" class="btn btn-primary btn-large btn-home">
-                    <span class="glyphicon glyphicon-user"></span>&nbsp;
-                        Create Account
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;Create Account
                 </a>
                 <p>
                     To view most of the data on T3, you'll first need to create a free account.
@@ -123,8 +125,7 @@ $show_accept_dialog => undef
                 <br />
 
                 <a id="account-prompts-login" href="#" class="btn btn-primary btn-large btn-home">
-                    <span class="glyphicon glyphicon-user"></span>&nbsp;
-                        Login
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;Login
                 </a>
                 <p>If you already have an account, login to get full access.</p>
             </div>
