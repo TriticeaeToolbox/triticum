@@ -329,9 +329,8 @@ $user_roles => 'unknown'
             <li>Find the trial(s) that you added</li>
             <li>Double click the trial name(s) to open the Trial Detail page(s)</li>
             <li>
-                Under the <strong>Trial Details</strong> section, click the 
-                <strong>Export Trial Details</strong> button to download a trial 
-                details template for the trial
+                Under the <strong>Trial Details</strong> section, click the <strong>Export Trial Details</strong> 
+                button to download a trial template for the trial
             </li>
         </ul>
         <p>Once you have the trial template(s) for all of your new trials:</p>

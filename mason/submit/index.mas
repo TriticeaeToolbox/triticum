@@ -1,5 +1,5 @@
 <%args>
-    @data_types => ("Breeding Program", "Locations", "Accessions")
+    @data_types => ("Breeding Program", "Locations", "Accessions", "Trials")
 </%args>
 
 
@@ -121,6 +121,21 @@
             <p>Upload an Excel (.xls) file containing accession information for any new or modified accessions</p>
 
             <input type="file" class="form-control" id="accessions-file" name="accessions-file" accept=".xls">
+        </div>
+
+
+        <!-- Trials -->
+        <div id="trials-group" class="data-type-group">
+            <h3>Accession Upload Template</h3>
+            <p>
+                Upload one or more trial templates (Excel (.xls) files) that contain the trial metadata and plot 
+                layout information for each new trial.  If you designed the trial interactively on the website, 
+                the trial templates used for submission can be downloaded from the Trial Detail page of each new 
+                trial by clicking the <strong>Export Trial Details</strong> button.  If you generated a 
+                multi-trial upload template, that file can be submitted here.
+            </p>
+
+            <input type="file" class="form-control" id="trials-file" name="accessions-file" accept=".xls" multiple>
         </div>
 
 
