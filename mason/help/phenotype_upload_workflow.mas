@@ -244,6 +244,8 @@ $user_roles => 'unknown'
     <h2>Trials</h2>
     <p>A phenotyping trial must exist in the database before the results can be added.  The Trial contains information about 
     its location, plot and field size, design type, and plot layout.  A Trial can be added in multiple ways:</p>
+
+    <h3>Testing</h3>
     <ul>
         <li>
             <strong>Option A - Using the trial design wizard:</strong> This will design a plot layout for you given lists 
@@ -325,9 +327,9 @@ $user_roles => 'unknown'
             This can be downloaded from the Trial Detail page of your new trials:
         </p>
         <ul>
-            <li>Go to the <a href="breeders/trials">Manage &gt; Field Trials</a> page</li>
+            <li>Go to the <a href="/search/trials">Search &gt; Field Trials</a> page or the <a href="breeders/trials">Manage &gt; Field Trials</a> page</li>
             <li>Find the trial(s) that you added</li>
-            <li>Double click the trial name(s) to open the Trial Detail page(s)</li>
+            <li>Click the trial name(s) to open the Trial Detail page(s)</li>
             <li>
                 Under the <strong>Trial Details</strong> section, click the <strong>Export Trial Details</strong> 
                 button to download a trial template for the trial
@@ -343,17 +345,19 @@ $user_roles => 'unknown'
 </div>
 
 <div class="section">
-    <h2>Results</h2>
+    <h2>Phenotype Observations</h2>
     <p>Once a Trial has been created, phenotype observations can be added to the Trial.  If you use the 
         <a href="http://phenoapps.org/all-courses/field-book/">Field Book</a> tablet app, you can create a file for 
         recording your observations directly on Field Book.  If you already have data, you can download a spreadsheet 
         template specifically for the trial.</p>
+
+    <h3>Testing</h3>
     <ul>
         <li><strong>Using Field Book:</strong>
             <ol>
                 <li>Go to the Trial detail page for your trial
                     <ul>
-                        <li>Go to the <a href="/search/trials">Trial Search</a> page</li>
+                        <li>Go to the <a href="/search/trials">Search &gt; Field Trials</a> page or the <a href="breeders/trials">Manage &gt; Field Trials</a> page</li>
                         <li>Find your trial</li>
                         <li>Click the name of your trial in the table to open the Trial detail page</li>
                     </ul>
@@ -376,7 +380,7 @@ $user_roles => 'unknown'
                 <li>Create a list of Traits that were observed in your trial</li>
                 <li>Go to the Trial detail page for your trial
                     <ul>
-                        <li>Go to the <a href="/search/trials">Trial Search</a> page</li>
+                        <li>Go to the <a href="/search/trials">Search &gt; Field Search</a> page or the <a href="breeders/trials">Manage &gt; Field Trials</a> page</li>
                         <li>Find your trial</li>
                         <li>Click the name of your trial in the table to open the Trial detail page</li>
                     </ul>
@@ -405,7 +409,19 @@ $user_roles => 'unknown'
         <li class="manual">View the <a href="https://solgenomics.github.io/sgn/01_basic_website_usage.html#working-with-lists">Working with Lists</a> 
         manual page for more information on creating and managing lists</li>
     </ul>
+
+    <div class="section-submit">
+        <h3>Submission</h3>
+
+        <ul>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Select <strong>Phenotype Observations</strong> as the data type</li>
+            <li>Upload your <strong>exported Android fieldbook files</strong> or <strong>phenotyping spreadsheets</strong></li>
+        </ul>        
+    </div>
 </div>
+
+<br /><br />
 
 
 <script type="text/javascript">
