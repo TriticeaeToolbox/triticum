@@ -1,5 +1,5 @@
 <%args>
-    @data_types => ("Breeding Program", "Locations", "Accessions", "Trials")
+    @data_types => ("Breeding Program", "Locations", "Accessions", "Trials", "Phenotype Observations", "Multiple Files")
 </%args>
 
 
@@ -134,8 +134,26 @@
                 trial by clicking the <strong>Export Trial Details</strong> button.  If you generated a 
                 multi-trial upload template, that file can be submitted here.
             </p>
-
             <input type="file" class="form-control" id="trials-file" name="accessions-file" accept=".xls" multiple>
+        </div>
+
+
+        <!-- Phenotype Observations -->
+        <div id="phenotype-observations-group" class="data-type-group">
+            <h3>Phenotype Observations Template(s)</h3>
+            <p>
+                Upload one or more phenotyping spreadsheets (Excel (.xls) files) or exported Android fieldbook 
+                files that contain phenotype observations for one or more trials.
+            </p>
+            <input type="file" class="form-control" id="phenotype-observations-file" name="phenotype-observations-file" accept=".xls" multiple>
+        </div>
+
+
+        <!-- Multiple Files -->
+        <div id="multiple-files-group" class="data-type-group">
+            <h3>Multiple Files</h3>
+            <p>Here you can upload multiple files of various data types at once</p>
+            <input type="file" class="form-control" id="multiple-files-file" name="multiple-files-file" multiple>
         </div>
 
 
