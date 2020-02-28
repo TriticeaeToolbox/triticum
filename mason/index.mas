@@ -199,7 +199,7 @@ $show_accept_dialog => undef
 
             <h3>Step 3: Submit Upload Templates</h3>
 
-            <a href="/submit" class="btn btn-primary btn-large btn-home">
+            <a href="/submit/pheno" class="btn btn-primary btn-large btn-home">
                 <span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;
                     Submit Upload Templates
             </a>

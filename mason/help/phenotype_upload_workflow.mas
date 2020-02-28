@@ -140,7 +140,7 @@ $user_roles => 'unknown'
     <div class="section-submit">
         <h3>Submission</h3>
         <ul>
-            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit/pheno">T3/Wheat Submission page</a>.</li>
             <li>Select <strong>Breeding Program</strong> as the data type</li>
             <li>Fill out the Breeding Program Request form</li>
         </ul>
@@ -188,7 +188,7 @@ $user_roles => 'unknown'
     <div class="section-submit">
         <h3>Submission</h3>
         <ul>
-            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit/pheno">T3/Wheat Submission page</a>.</li>
             <li>Select <strong>Locations</strong> as the data type</li>
             <li>Upload your locations template with any new or modified locations</li>
         </ul>
@@ -233,7 +233,7 @@ $user_roles => 'unknown'
     <div class="section-submit">
         <h3>Submission</h3>
         <ul>
-            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit/pheno">T3/Wheat Submission page</a>.</li>
             <li>Select <strong>Accessions</strong> as the data type</li>
             <li>Upload your accessions template with any new or modified accessions</li>
         </ul>
@@ -337,7 +337,7 @@ $user_roles => 'unknown'
         </ul>
         <p>Once you have the trial template(s) for all of your new trials:</p>
         <ul>
-            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit/pheno">T3/Wheat Submission page</a>.</li>
             <li>Select <strong>Trials</strong> as the data type</li>
             <li>Upload your trial template(s) for all new trials</li>
         </ul>
@@ -372,7 +372,7 @@ $user_roles => 'unknown'
                 <li>Additional files, such as images or raw data files can be uploaded in the <strong>Upload Additional Files</strong> section</li>
             </ol>
         </li>
-        <li class="manual">View the <a href=https://solgenomics.github.io/sgn/03_managing_breeding_data/03_09.html">Using Field Book App</a> 
+        <li class="manual">View the <a href="https://solgenomics.github.io/sgn/03_managing_breeding_data/03_09.html">Using Field Book App</a> 
         section in the manual for more information on collecting field data using the Android tablet app.</li>
         <br />
         <li><strong>Uploading Existing Data:</strong>
@@ -414,7 +414,7 @@ $user_roles => 'unknown'
         <h3>Submission</h3>
 
         <ul>
-            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit">T3/Wheat Submission page</a>.</li>
+            <li>Visit the <a href="https://wheat.triticeaetoolbox.org/submit/pheno">T3/Wheat Submission page</a>.</li>
             <li>Select <strong>Phenotype Observations</strong> as the data type</li>
             <li>Upload your <strong>exported Android fieldbook files</strong> or <strong>phenotyping spreadsheets</strong></li>
         </ul>        
