@@ -18,14 +18,14 @@ $show_accept_dialog => undef
     a.btn {
         color: #fff;
     }
+    a.btn-primary:hover {
+        background-color: #286090 !important;
+        color: #fff !important;
+    }
     .btn-home {
         float: right;
         margin: 5px 10px;
         width: 220px;
-    }
-    .btn-home:hover {
-        background-color: #286090 !important;
-        color: #fff !important;
     }
     .btn-search {
         margin: 5px 0;
@@ -171,42 +171,45 @@ $show_accept_dialog => undef
 
             <h2>Submit Phenotype Data</h2>
 
+            <p>To submit phenotype data to T3 follow these three general steps:</p>
 
             <h3>Step 1: Create Upload Templates</h3>
 
-            <a href="https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-pushpin"></span>&nbsp;
-                    Upload Instructions
-            </a>
             <p>
                 Data submitted to T3 should be in the format of the upload 
-                template for the data type you are submitting.  <strong>View the upload 
-                instructions</strong> for specific information on each data type.
+                template for the data type you are submitting.  
+                <a href='https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow'>
+                    View the upload instructions on the T3/Wheat Sandbox
+                </a> 
+                for specific information on each data type.
             </p>
 
 
-            <h3>Step 2: Test-load Upload Templates</h3>
+            <h3>Step 2: Add Data to Sandbox</h3>
 
-            <a href="https://wheat-sandbox.triticeaetoolbox.org/" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
-                    T3/Wheat Sandbox
-            </a>
             <p>
-                Once you have your upload templates, you can test-load them on the <strong>T3/Wheat Sandbox</strong> 
+                Once you have your upload templates, you can test-load them on the 
+                <a href='https://wheat-sandbox.triticeaetoolbox.org'>T3/Wheat Sandbox</a> 
                 to check for any errors.
             </p>
 
 
-            <h3>Step 3: Submit Upload Templates</h3>
+            <h3>Step 3: Submit Trial Data</h3>
 
-            <a href="/submit/pheno" class="btn btn-primary btn-large btn-home">
-                <span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;
-                    Submit Upload Templates
-            </a>
             <p>
-                When you are ready to add your data to T3, you can <strong>submit your upload templates</strong> 
-                to be added to the main T3/Wheat database.
+                If your trial data has been successfully added to the T3/Wheat Sandbox you can 
+                submit your trials directly to the production site by clicking the <strong>Submit Trial</strong> 
+                button on the trial detail page.
             </p>
+            <p>
+                If your data has not been added to the T3/Wheat Sandbox you can still submit your individual upload 
+                templates or data files to us using the <a href='/submit/pheno'>Phenotype Submission Form</a>.
+            </p>
+
+            <br />
+            <a class="btn btn-primary btn-block" href="https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow">
+                <span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Detailed Upload Instructions
+            </a>
             
 
             <br /><br /><br />
