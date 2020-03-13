@@ -202,8 +202,9 @@ $show_accept_dialog => undef
                 button on the trial detail page.
             </p>
             <p>
-                If your data has not been added to the T3/Wheat Sandbox you can still submit your individual upload 
-                templates or data files to us using the <a href='/submit/pheno'>Phenotype Submission Form</a>.
+                If your data has not been added to the T3/Wheat Sandbox or if you would prefer to submit your files 
+                directly to the production site, you can submit your individual upload templates or data files to us 
+                using the <a href='/submit/pheno'>Phenotype Submission Form</a>.
             </p>
 
             <br />
