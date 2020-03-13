@@ -1,5 +1,5 @@
 <%args>
-    @data_types => ("Breeding Program", "Locations", "Accessions", "Trials", "Phenotype Observations", "Multiple Files")
+    @data_types => ("Breeding Program", "Locations", "Accessions", "Trials", "Phenotype Observations", "Other")
 </%args>
 
 
@@ -34,12 +34,13 @@
 
 
 <p>
-    Submit your upload templates here when you are ready to have your data published on T3.  For more 
-    information on generating the upload templates for each data type, visit the 
+    You can use this form to submit individual upload templates or other files containing data 
+    that you would like submitted to T3.  For more information on generating the upload templates 
+    for each data type, read the 
     <a href='https://wheat-sandbox.triticeaetoolbox.org/help/phenotype_upload_workflow'>
         Phenotype Upload Workflow
     </a>
-    instructions.
+    instructions on the T3/Wheat sandbox.
 </p>
 
 
@@ -129,10 +130,8 @@
             <h3>Trial Upload Template(s)</h3>
             <p>
                 Upload one or more trial templates (Excel (.xls) files) that contain the trial metadata and plot 
-                layout information for each new trial.  If you designed the trial interactively on the website, 
-                the trial templates used for submission can be downloaded from the Trial Detail page of each new 
-                trial by clicking the <strong>Export Trial Details</strong> button.  If you generated a 
-                multi-trial upload template, that file can be submitted here.
+                layout information for each new trial.  If you designed the trial interactively on the sandbox, 
+                you should use the <em>Submit Trial</em> function to submit the trial directly from the sandbox.
             </p>
             <input type="file" class="form-control" id="trials-file" name="accessions-file" accept=".xls" multiple>
         </div>
@@ -149,11 +148,11 @@
         </div>
 
 
-        <!-- Multiple Files -->
-        <div id="multiple-files-group" class="data-type-group">
-            <h3>Multiple Files</h3>
-            <p>Here you can upload multiple files of various data types at once</p>
-            <input type="file" class="form-control" id="multiple-files-file" name="multiple-files-file" multiple>
+        <!-- Other -->
+        <div id="other-group" class="data-type-group">
+            <h3>Other</h3>
+            <p>Here you can upload one or more files of various data types</p>
+            <input type="file" class="form-control" id="other-file" name="other-file" multiple>
         </div>
 
 
