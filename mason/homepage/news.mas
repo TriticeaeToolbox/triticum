@@ -4,11 +4,14 @@
 use strict;
 
 my $file = $c->get_conf('homepage_files_dir') . '/news.txt';
-my $contents = do {
-    local $/ = undef;
-    open my $fh, "<", $file or die "could not open $file: $!";
-    <$fh>;
-};
+my $contents = "<p>No recent updates.</p>";
+if (-e $file) {
+    $contents = do {
+        local $/ = undef;
+        open my $fh, "<", $file or die "could not open $file: $!";
+        <$fh>;
+    };
+}
 
 </%perl>
 
