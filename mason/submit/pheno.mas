@@ -1,0 +1,17 @@
+<%args>
+</%args>
+
+
+<style></style>
+
+
+<& /page/page_title.mas, title=>"Phenotype Data Submission" &>
+
+<div class="container">
+    <br /><br />
+    <p>
+        Go to the <a href='https://wheat.triticeaetoolbox.org/submit/pheno'>Phenotype Submission Form on the production site</a>
+        to submit data files for curation.
+    </p>
+    <br /><br />
+</div>
