@@ -2,9 +2,6 @@
 </%args>
 
 
-<style></style>
-
-
 <& /page/page_title.mas, title=>"Phenotype Data Submission" &>
 
 <div class="container">
@@ -15,3 +12,8 @@
     </p>
     <br /><br />
 </div>
+
+
+<script type="text/javascript">
+    window.location.replace("https://wheat.triticeaetoolbox.org/submit/pheno");
+</script>
