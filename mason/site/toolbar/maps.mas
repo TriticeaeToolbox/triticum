@@ -1,7 +1,7 @@
 <li class="dropdown"><a class="menu_click_dropdown dropdown-toggle" data-toggle="dropdown" href="/cview">Maps</a>
 <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tools<span class="caret"></span></a> -->
   <ul class="dropdown-menu">
-    <li><a href="https://maps.triticeaetoolbox.org/">Comarative Map Viewer</a></li>
+    <li><a href="https://maps.triticeaetoolbox.org/">Comparative Map Viewer</a></li>
     <!--li><a href="/cview/map.pl?map_version_id=32">CMap Variants in T3</a></li-->
     <!--li><a href="/cview/map.pl?map_version_id=33">CMap HapMap 2014</a></li-->
     <li><a href="https://wheat.pw.usda.gov/jb/?data=/ggds/whe-iwgsc2018" target=_new>JBrowse RefSeq v1</a>
