@@ -1,0 +1,15 @@
+<%args>
+$trial_id
+</%args>
+
+<%perl>
+
+my $jbrowse_path = $c->config->{jbrowse_path};
+my @path_parts = split('/', $jbrowse_path);
+my $basepath = $path_parts[1];
+my $test_url = "/" . $basepath . "/jbrowse.conf";
+my $jbrowse_url = $jbrowse_path ."?data=/ggds/whe-iwgsc2018&loc=";
+
+</%perl>
+
+<a href="<% $jbrowse_url %>">View the dataset for this trial in JBrowse</a>
