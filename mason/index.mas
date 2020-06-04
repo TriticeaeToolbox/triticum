@@ -15,7 +15,7 @@ $show_accept_dialog => undef
         font-size: 95%;
         color: #aaa;
     }
-    a.btn {
+    a.btn-primary {
         color: #fff;
     }
     .btn-home {
