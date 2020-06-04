@@ -10,6 +10,15 @@
 -->
 
 <div class="news-item">
+    <p class="news-item-title">Phenotype Trials Added</p>
+    <p class="news-item-date">Jan 22, 2020</p>
+    <div class="news-item-content">
+        <p>Phenotype data from 30 trials conducted in 2017 have been added.  To view the Trials go to the 
+        <a href="/breeders/trials">Manage &gt; Field Trials</a> page.</p>
+    </div>
+</div>
+
+<div class="news-item">
     <p class="news-item-title">Accessions Added</p>
     <p class="news-item-date">Jan 9, 2020</p>
     <div class="news-item-content">
