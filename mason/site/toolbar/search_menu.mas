@@ -3,6 +3,7 @@
     <li><a href="/breeders/search">Wizard</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="/search/phenotypes/stock">Accessions and Plots</a></li>
+    <li><a href="https://synonyms.triticeaetoolbox.org/?db_address=https://wheat-sandbox.triticeaetoolbox.org/brapi/v1&db_version=v1.3">Bulk Accession Search</a></li>
     <li><a href="/search/cross">Progenies and Crosses</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="/search/trials">Field Trials</a></li>
